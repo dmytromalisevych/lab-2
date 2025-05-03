@@ -1,0 +1,70 @@
+@model HospitalAppointmentSystem.Models.Appointment
+
+@{
+    ViewData["Title"] = "Створення призначення";
+}
+
+<div class="container mt-4">
+    <h2>Створення нового призначення</h2>
+
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Додати нове призначення</h5>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="PatientId" class="form-label">Пацієнт</label>
+                    <select asp-for="PatientId" class="form-select" required>
+                        <option value="">-- Виберіть пацієнта --</option>
+                        @foreach (var patient in ViewBag.Patients)
+                        {
+                            <option value="@patient.PatientId">@patient.FullName</option>
+                        }
+                    </select>
+                    <span asp-validation-for="PatientId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DoctorId" class="form-label">Лікар</label>
+                    <select asp-for="DoctorId" class="form-select" required>
+                        <option value="">-- Виберіть лікаря --</option>
+                        @foreach (var doctor in ViewBag.Doctors)
+                        {
+                            <option value="@doctor.DoctorId">@doctor.FullName</option>
+                        }
+                    </select>
+                    <span asp-validation-for="DoctorId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="AppointmentDateTime" class="form-label">Дата та час</label>
+                    <input asp-for="AppointmentDateTime" class="form-control" type="datetime-local" required/>
+                    <span asp-validation-for="AppointmentDateTime" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Notes" class="form-label">Причина візиту</label>
+                    <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-save"></i> Створити
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fa fa-arrow-left"></i> Повернутися до списку
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

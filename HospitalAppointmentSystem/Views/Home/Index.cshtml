@@ -1,0 +1,59 @@
+﻿@model HospitalAppointmentSystem.Models.ViewModels.AppointmentsListViewModel
+
+@{
+    ViewData["Title"] = "Призначення";
+}
+
+<h2>Призначення</h2>
+
+<p>
+    <a asp-controller="Appointments" asp-action="Create" class="btn btn-primary">Створити нове призначення</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Пацієнт</th>
+        <th>Лікар</th>
+        <th>Дата</th>
+        <th>Статус</th>
+        <th>Дії</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var appointment in Model.Appointments)
+    {
+        <tr>    
+            <td>@appointment.Patient.FullName</td>
+            <td>@appointment.Doctor.FullName</td>
+            <td>@appointment.AppointmentDateTime.ToString("dd.MM.yyyy HH:mm")</td>
+            <td>@appointment.Status</td>
+            <td>
+                <div class="btn-group">
+                    <a asp-controller="Appointments" asp-action="Details" asp-route-id="@appointment.AppointmentId" class="btn btn-info btn-sm">
+                        <i class="fa fa-info-circle"></i> Деталі
+                    </a>
+                    <a asp-controller="Appointments" asp-action="Edit" asp-route-id="@appointment.AppointmentId" class="btn btn-warning btn-sm mx-1">
+                        <i class="fa fa-edit"></i> Редагувати
+                    </a>
+                    <a asp-controller="Appointments" asp-action="Delete" asp-route-id="@appointment.AppointmentId" class="btn btn-danger btn-sm">
+                        <i class="fa fa-trash"></i> Видалити
+                    </a>
+                    @if (appointment.Status != AppointmentStatus.Cancelled)
+                    {
+                        <a asp-controller="Appointments" asp-action="Cancel" asp-route-id="@appointment.AppointmentId" class="btn btn-secondary btn-sm ms-1"
+                           onclick="return confirm('Ви впевнені, що хочете скасувати це призначення?');">
+                            <i class="fa fa-ban"></i> Скасувати
+                        </a>
+                    }
+                </div>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+     page-class="page-item" page-class-normal="page-link" page-class-selected="active"
+     class="d-flex justify-content-center">
+</div>
