@@ -6,43 +6,21 @@ namespace HospitalAppointmentSystem.Models
     public class Appointment
     {
         public int AppointmentId { get; set; }
-        
-        [Required]
-        public int PatientId { get; set; }
-        
-        [Required]
+    
         public int DoctorId { get; set; }
-        
-        [Required(ErrorMessage = "Дата прийому обов'язкова")]
-        [DataType(DataType.DateTime)]
-        [Display(Name = "Дата прийому")]
+        public Doctor Doctor { get; set; }
+    
+        public int PatientId { get; set; }
+        public Patient Patient { get; set; }
+    
+        [Required(ErrorMessage = "Виберіть дату та час")]
+        [Display(Name = "Дата та час")]
         public DateTime AppointmentDateTime { get; set; }
-        
-        [StringLength(500)]
+    
         [Display(Name = "Примітки")]
         public string Notes { get; set; }
-        
-        [Required]
+    
         [Display(Name = "Статус")]
         public AppointmentStatus Status { get; set; }
-        
-        public Patient Patient { get; set; }
-        public Doctor Doctor { get; set; }
-        
-    }
-    
-    public enum AppointmentStatus
-    {
-        [Display(Name = "Заплановано")]
-        Scheduled,
-        
-        [Display(Name = "Завершено")]
-        Completed,
-        
-        [Display(Name = "Скасовано")]
-        Cancelled,
-        
-        [Display(Name = "Оновлено")]
-        UpdatedAt
     }
 }

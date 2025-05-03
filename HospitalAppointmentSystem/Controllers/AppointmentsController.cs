@@ -6,52 +6,64 @@ using Microsoft.EntityFrameworkCore;
 using HospitalAppointmentSystem.Models;
 using HospitalAppointmentSystem.Models.ViewModels;
 
+
 namespace HospitalAppointmentSystem.Controllers
 {
     public class AppointmentsController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ILogger<AppointmentsController> _logger;
 
-        public AppointmentsController(AppDbContext context)
+        public AppointmentsController(AppDbContext context, ILogger<AppointmentsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
-        // GET: Appointments
-        public async Task<IActionResult> Index(int page = 1)
+        public async Task<IActionResult> Index(string searchString, string status, int page = 1)
         {
-            int pageSize = 10;
-            
-            var appointments = await _context.Appointments
-                .Include(a => a.Doctor)
-                .Include(a => a.Patient)
-                .OrderBy(a => a.AppointmentDateTime)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
-                
-            int totalAppointments = await _context.Appointments.CountAsync();
-            int doctorsCount = await _context.Doctors.CountAsync();
-            int patientsCount = await _context.Patients.CountAsync();
-            
-            var pagingInfo = new PagingInfo
+            try
             {
-                CurrentPage = page,
-                ItemsPerPage = pageSize,
-                TotalItems = totalAppointments
-            };
+                var appointmentsQuery = _context.Appointments
+                    .Include(a => a.Doctor)
+                    .Include(a => a.Patient)
+                    .AsQueryable();
+
+                // Фільтрація за статусом
+                if (!string.IsNullOrEmpty(status))
+                {
+                    if (Enum.TryParse<AppointmentStatus>(status, out var appointmentStatus))
+                    {
+                        appointmentsQuery = appointmentsQuery.Where(a => a.Status == appointmentStatus);
+                    }
+                }
+
+                // Пошук
+                if (!string.IsNullOrEmpty(searchString))
+                {
+                    appointmentsQuery = appointmentsQuery.Where(a =>
+                        a.Doctor.LastName.Contains(searchString) ||
+                        a.Doctor.FirstName.Contains(searchString) ||
+                        a.Patient.LastName.Contains(searchString) ||
+                        a.Patient.FirstName.Contains(searchString) ||
+                        a.Notes.Contains(searchString));
+                }
+
+                var totalAppointments = await appointmentsQuery.CountAsync();
             
-            var viewModel = new AppointmentsListViewModel
+                var appointments = await appointmentsQuery
+                    .OrderByDescending(a => a.AppointmentDateTime)
+                    .ToListAsync();
+
+                return View(appointments);
+            }
+            catch (Exception ex)
             {
-                Appointments = appointments,
-                PagingInfo = pagingInfo,
-                TotalAppointments = totalAppointments,
-                DoctorsCount = doctorsCount,
-                PatientsCount = patientsCount
-            };
-            
-            return View(viewModel);
+                _logger.LogError($"Помилка при отриманні списку призначень: {ex.Message}");
+                return View(new List<Appointment>());
+            }
         }
+    
         
         // GET: Appointments/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -89,15 +101,26 @@ namespace HospitalAppointmentSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                appointment.Status = AppointmentStatus.Scheduled;
-                
-                _context.Add(appointment);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                using (var transaction = await _context.Database.BeginTransactionAsync())
+                {
+                    try
+                    {
+                        appointment.Status = AppointmentStatus.Scheduled;
+                        _context.Add(appointment);
+                        await _context.SaveChangesAsync();
+                        await transaction.CommitAsync();
+                        return RedirectToAction(nameof(Index));
+                    }
+                    catch (Exception ex)
+                    {
+                        await transaction.RollbackAsync();
+                        ModelState.AddModelError("", "Помилка при збереженні даних: " + ex.Message);
+                    }
+                }
             }
-            
-            ViewBag.Doctors = _context.Doctors.ToList();
-            ViewBag.Patients = _context.Patients.ToList();
+    
+            ViewBag.Doctors = await _context.Doctors.ToListAsync();
+            ViewBag.Patients = await _context.Patients.ToListAsync();
             return View(appointment);
         }
         
@@ -157,24 +180,30 @@ namespace HospitalAppointmentSystem.Controllers
         }
         
         // GET: Appointments/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
+            try
             {
-                return NotFound();
-            }
+                var appointment = await _context.Appointments
+                    .Include(a => a.Doctor)
+                    .Include(a => a.Patient)
+                    .FirstOrDefaultAsync(a => a.AppointmentId == id);
 
-            var appointment = await _context.Appointments
-                .Include(a => a.Doctor)
-                .Include(a => a.Patient)
-                .FirstOrDefaultAsync(m => m.AppointmentId == id);
-                
-            if (appointment == null)
+                if (appointment == null)
+                {
+                    return NotFound();
+                }
+
+                _context.Appointments.Remove(appointment);
+                await _context.SaveChangesAsync();
+        
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
             {
-                return NotFound();
+                // Додаємо логування помилки
+                return RedirectToAction(nameof(Index));
             }
-
-            return View(appointment);
         }
         
         // POST: Appointments/Delete/5

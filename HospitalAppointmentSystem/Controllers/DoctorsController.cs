@@ -49,23 +49,28 @@ namespace HospitalAppointmentSystem.Controllers
         {
             var doctor = _context.Doctors
                 .Include(d => d.Availabilities)
+                .Include(d => d.Appointments)
+                .ThenInclude(a => a.Patient)
                 .FirstOrDefault(d => d.DoctorId == id);
-                
+            
             if (doctor == null)
             {
                 return NotFound();
             }
-            
+        
             var appointments = _context.Appointments
                 .Include(a => a.Patient)
-                .Where(a => a.DoctorId == id && a.Status == AppointmentStatus.Scheduled && a.AppointmentDateTime > DateTime.Now)
+                .Where(a => a.DoctorId == id && 
+                            a.Status == AppointmentStatus.Scheduled && 
+                            a.AppointmentDateTime > DateTime.Now)
                 .OrderBy(a => a.AppointmentDateTime)
                 .ToList();
-                
-            ViewBag.Appointments = appointments;
             
+            ViewBag.Appointments = appointments;
+        
             return View(doctor);
         }
+
         
         public IActionResult Create()
         {
@@ -129,16 +134,41 @@ namespace HospitalAppointmentSystem.Controllers
             return View(doctor);
         }
         
-        public IActionResult Delete(int id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
         {
-            var doctor = _context.Doctors.Find(id);
-                
-            if (doctor == null)
+            using (var transaction = await _context.Database.BeginTransactionAsync())
             {
-                return NotFound();
+                try
+                {
+                    var doctor = await _context.Doctors
+                        .Include(d => d.Appointments)
+                        .FirstOrDefaultAsync(d => d.DoctorId == id);
+
+                    if (doctor == null)
+                    {
+                        return NotFound();
+                    }
+
+                    // Перевіряємо, чи є активні призначення
+                    if (doctor.Appointments.Any(a => a.Status == AppointmentStatus.Scheduled))
+                    {
+                        ModelState.AddModelError("", "Неможливо видалити лікаря з активними призначеннями");
+                        return View(doctor);
+                    }
+
+                    _context.Doctors.Remove(doctor);
+                    await _context.SaveChangesAsync();
+                    await transaction.CommitAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    await transaction.RollbackAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
-            
-            return View(doctor);
         }
         
         [HttpPost, ActionName("Delete")]
