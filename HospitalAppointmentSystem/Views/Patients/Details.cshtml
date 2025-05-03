@@ -1,0 +1,24 @@
+@model Patient
+
+<div class="container-fluid">
+    <h2>Деталі пацієнта</h2>
+    <hr />
+
+    <div>
+        <dl class="row">
+            <dt class="col-sm-2">Прізвище</dt>
+            <dd class="col-sm-10">@Model.LastName</dd>
+
+            <dt class="col-sm-2">Ім'я</dt>
+            <dd class="col-sm-10">@Model.FirstName</dd>
+
+            <dt class="col-sm-2">Дата народження</dt>
+            <dd class="col-sm-10">@Model.DateOfBirth.ToString("dd.MM.yyyy")</dd>
+        </dl>
+    </div>
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.PatientId" class="btn btn-warning">Редагувати</a>
+        <a asp-action="Index" class="btn btn-secondary">Назад</a>
+    </div>
+</div>

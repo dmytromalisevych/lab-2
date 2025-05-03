@@ -1,0 +1,41 @@
+@model Patient
+
+<div class="container-fluid">
+    <h2>Редагувати пацієнта</h2>
+    <hr />
+
+    <form asp-action="Edit">
+        <input type="hidden" asp-for="PatientId" />
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label asp-for="LastName" class="control-label">Прізвище</label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="FirstName" class="control-label">Ім'я</label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="DateOfBirth" class="control-label">Дата народження</label>
+                    <input asp-for="DateOfBirth" class="form-control" type="date" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Зберегти" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary">Назад</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

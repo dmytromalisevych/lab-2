@@ -61,8 +61,6 @@ namespace HospitalAppointmentSystem.Controllers
                 Appointments = upcomingAppointments,
                 PagingInfo = pagingInfo,
                 TotalAppointments = appointmentsCount,
-                DoctorsCount = doctorsCount,
-                PatientsCount = patientsCount
             };
             
             return View(viewModel);

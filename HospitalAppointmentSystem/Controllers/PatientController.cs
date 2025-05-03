@@ -1,155 +1,142 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HospitalAppointmentSystem.Models;
-using HospitalAppointmentSystem.Models.ViewModels;
 
 namespace HospitalAppointmentSystem.Controllers
 {
     public class PatientsController : Controller
     {
         private readonly AppDbContext _context;
-        private readonly int _pageSize = 5;
 
         public PatientsController(AppDbContext context)
         {
             _context = context;
         }
 
-        public IActionResult Index(int page = 1)
+        // GET: /Patients/
+        public async Task<IActionResult> Index()
         {
-
-            var patientsQuery = _context.Patients
-                .OrderBy(p => p.LastName);
-            
-            int totalItems = patientsQuery.Count();
-            
-            var patients = patientsQuery
-                .Skip((page - 1) * _pageSize)
-                .Take(_pageSize)
-                .ToList();
-            
-            var viewModel = new PatientsListViewModel
-            {
-                Patients = patients,
-                PagingInfo = new PagingInfo
-                {
-                    CurrentPage = page,
-                    ItemsPerPage = _pageSize,
-                    TotalItems = totalItems
-                }
-            };
-            
-            return View(viewModel);
+            return View(await _context.Patients.ToListAsync());
         }
-        
-        public IActionResult Details(int id)
+
+        // GET: /Patients/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            var patient = _context.Patients.Find(id);
-                
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var patient = await _context.Patients
+                .FirstOrDefaultAsync(m => m.PatientId == id);
+
             if (patient == null)
             {
                 return NotFound();
             }
-            
-            var appointments = _context.Appointments
-                .Include(a => a.Doctor)
-                .Where(a => a.PatientId == id)
-                .OrderByDescending(a => a.AppointmentDateTime)
-                .ToList();
-                
-            ViewBag.Appointments = appointments;
-            
+
             return View(patient);
         }
-        
+
+        // GET: /Patients/Create
         public IActionResult Create()
         {
             return View();
         }
-        
+
+        // POST: /Patients/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Patient patient)
+        public async Task<IActionResult> Create([Bind("FirstName,LastName,DateOfBirth")] Patient patient)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Patients.Add(patient);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(patient);
+                    await _context.SaveChangesAsync();
+                    TempData["Success"] = "Пацієнта успішно додано";
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Не вдалося створити запис. Спробуйте ще раз.");
             }
             return View(patient);
         }
-        
-        public IActionResult Edit(int id)
+
+        // GET: /Patients/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
-            var patient = _context.Patients.Find(id);
-            
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var patient = await _context.Patients.FindAsync(id);
             if (patient == null)
             {
                 return NotFound();
             }
-            
             return View(patient);
         }
-        
+
+        // POST: /Patients/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Patient patient)
+        public async Task<IActionResult> Edit(int id, [Bind("PatientId,FirstName,LastName,DateOfBirth")] Patient patient)
         {
             if (id != patient.PatientId)
             {
                 return NotFound();
             }
-            
-            if (ModelState.IsValid)
+
+            try
             {
-                try
+                if (ModelState.IsValid)
                 {
                     _context.Update(patient);
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
+                    TempData["Success"] = "Дані пацієнта оновлено";
+                    return RedirectToAction(nameof(Index));
                 }
-                catch (DbUpdateConcurrencyException)
+            }
+            catch (Exception ex)
+            {
+                if (!PatientExists(patient.PatientId))
                 {
-                    if (!PatientExists(patient.PatientId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    return NotFound();
+                }
+                ModelState.AddModelError("", "Не вдалося оновити запис. Спробуйте ще раз.");
+            }
+            
+            return View(patient);
+        }
+
+        // POST: /Patients/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            try
+            {
+                var patient = await _context.Patients.FindAsync(id);
+                if (patient != null)
+                {
+                    _context.Patients.Remove(patient);
+                    await _context.SaveChangesAsync();
+                    TempData["Success"] = "Пацієнта видалено";
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(patient);
-        }
-        
-        public IActionResult Delete(int id)
-        {
-            var patient = _context.Patients.Find(id);
-                
-            if (patient == null)
+            catch (Exception ex)
             {
-                return NotFound();
+                TempData["Error"] = "Не вдалося видалити запис";
+                return RedirectToAction(nameof(Index));
             }
-            
-            return View(patient);
         }
-        
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            var patient = _context.Patients.Find(id);
-            _context.Patients.Remove(patient);
-            _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
-        }
-        
+
         private bool PatientExists(int id)
         {
             return _context.Patients.Any(e => e.PatientId == id);
