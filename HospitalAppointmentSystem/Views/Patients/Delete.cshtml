@@ -1,0 +1,45 @@
+@model Patient
+
+<div class="container-fluid">
+    <h2>Видалити пацієнта</h2>
+    <hr />
+
+    <div class="alert alert-danger">
+        <h4>Ви впевнені, що хочете видалити цього пацієнта?</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="row">
+                <dt class="col-sm-3">Прізвище</dt>
+                <dd class="col-sm-9">@Model.LastName</dd>
+
+                <dt class="col-sm-3">Ім'я</dt>
+                <dd class="col-sm-9">@Model.FirstName</dd>
+
+                <dt class="col-sm-3">Дата народження</dt>
+                <dd class="col-sm-9">@Model.DateOfBirth.ToString("dd.MM.yyyy")</dd>
+            </dl>
+
+            @if (Model.Appointments != null && Model.Appointments.Any(a => a.Status == AppointmentStatus.Scheduled))
+            {
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Увага! У пацієнта є активні призначення. Видалення неможливе.
+                </div>
+            }
+            else
+            {
+                <form asp-action="Delete" method="post">
+                    <input type="hidden" asp-for="PatientId" />
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Ви впевнені, що хочете видалити цього пацієнта?');">
+                        <i class="fas fa-trash"></i> Видалити
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Назад
+                    </a>
+                </form>
+            }
+        </div>
+    </div>
+</div>

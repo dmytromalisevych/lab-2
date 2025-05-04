@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using HospitalAppointmentSystem.Models;
 
 namespace HospitalAppointmentSystem.Controllers
@@ -7,19 +8,33 @@ namespace HospitalAppointmentSystem.Controllers
     public class PatientsController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly ILogger<PatientsController> _logger;
 
-        public PatientsController(AppDbContext context)
+        public PatientsController(AppDbContext context, ILogger<PatientsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
-        // GET: /Patients/
+        // GET: Patients
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Patients.ToListAsync());
+            try
+            {
+                var patients = await _context.Patients
+                    .Include(p => p.Appointments)
+                    .OrderBy(p => p.LastName)
+                    .ToListAsync();
+                return View(patients);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error getting patients: {ex.Message}");
+                return View(new List<Patient>());
+            }
         }
 
-        // GET: /Patients/Details/5
+        // GET: Patients/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -27,46 +42,57 @@ namespace HospitalAppointmentSystem.Controllers
                 return NotFound();
             }
 
-            var patient = await _context.Patients
-                .FirstOrDefaultAsync(m => m.PatientId == id);
-
-            if (patient == null)
+            try
             {
-                return NotFound();
-            }
+                var patient = await _context.Patients
+                    .Include(p => p.Appointments)
+                    .ThenInclude(a => a.Doctor)
+                    .FirstOrDefaultAsync(p => p.PatientId == id);
 
-            return View(patient);
+                if (patient == null)
+                {
+                    return NotFound();
+                }
+
+                return View(patient);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error getting patient details: {ex.Message}");
+                return RedirectToAction(nameof(Index));
+            }
         }
 
-        // GET: /Patients/Create
+        // GET: Patients/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: /Patients/Create
+        // POST: Patients/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FirstName,LastName,DateOfBirth")] Patient patient)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                try
                 {
                     _context.Add(patient);
                     await _context.SaveChangesAsync();
                     TempData["Success"] = "Пацієнта успішно додано";
                     return RedirectToAction(nameof(Index));
                 }
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("", "Не вдалося створити запис. Спробуйте ще раз.");
+                catch (Exception ex)
+                {
+                    _logger.LogError($"Error creating patient: {ex.Message}");
+                    ModelState.AddModelError("", "Помилка при створенні пацієнта");
+                }
             }
             return View(patient);
         }
 
-        // GET: /Patients/Edit/5
+        // GET: Patients/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,15 +100,23 @@ namespace HospitalAppointmentSystem.Controllers
                 return NotFound();
             }
 
-            var patient = await _context.Patients.FindAsync(id);
-            if (patient == null)
+            try
             {
-                return NotFound();
+                var patient = await _context.Patients.FindAsync(id);
+                if (patient == null)
+                {
+                    return NotFound();
+                }
+                return View(patient);
             }
-            return View(patient);
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error getting patient for edit: {ex.Message}");
+                return RedirectToAction(nameof(Index));
+            }
         }
 
-        // POST: /Patients/Edit/5
+        // POST: Patients/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("PatientId,FirstName,LastName,DateOfBirth")] Patient patient)
@@ -92,47 +126,94 @@ namespace HospitalAppointmentSystem.Controllers
                 return NotFound();
             }
 
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                try
                 {
                     _context.Update(patient);
                     await _context.SaveChangesAsync();
                     TempData["Success"] = "Дані пацієнта оновлено";
                     return RedirectToAction(nameof(Index));
                 }
-            }
-            catch (Exception ex)
-            {
-                if (!PatientExists(patient.PatientId))
+                catch (DbUpdateConcurrencyException)
                 {
-                    return NotFound();
+                    if (!PatientExists(patient.PatientId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
-                ModelState.AddModelError("", "Не вдалося оновити запис. Спробуйте ще раз.");
+                catch (Exception ex)
+                {
+                    _logger.LogError($"Error updating patient: {ex.Message}");
+                    ModelState.AddModelError("", "Помилка при оновленні даних пацієнта");
+                }
             }
-            
             return View(patient);
         }
 
-        // POST: /Patients/Delete/5
+        // GET: Patients/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                var patient = await _context.Patients
+                    .Include(p => p.Appointments)
+                    .FirstOrDefaultAsync(p => p.PatientId == id);
+
+                if (patient == null)
+                {
+                    return NotFound();
+                }
+
+                return View(patient);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error getting patient for delete: {ex.Message}");
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+        // POST: Patients/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             try
             {
-                var patient = await _context.Patients.FindAsync(id);
-                if (patient != null)
+                var patient = await _context.Patients
+                    .Include(p => p.Appointments)
+                    .FirstOrDefaultAsync(p => p.PatientId == id);
+
+                if (patient == null)
                 {
-                    _context.Patients.Remove(patient);
-                    await _context.SaveChangesAsync();
-                    TempData["Success"] = "Пацієнта видалено";
+                    return NotFound();
                 }
+
+                if (patient.Appointments != null && patient.Appointments.Any(a => a.Status == AppointmentStatus.Scheduled))
+                {
+                    TempData["Error"] = "Неможливо видалити пацієнта з активними призначеннями";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                _context.Patients.Remove(patient);
+                await _context.SaveChangesAsync();
+                TempData["Success"] = "Пацієнта видалено";
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
-                TempData["Error"] = "Не вдалося видалити запис";
+                _logger.LogError($"Error deleting patient: {ex.Message}");
+                TempData["Error"] = "Помилка при видаленні пацієнта";
                 return RedirectToAction(nameof(Index));
             }
         }

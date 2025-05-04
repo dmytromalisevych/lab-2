@@ -22,6 +22,7 @@ namespace HospitalAppointmentSystem.Models
                 .HasForeignKey(a => a.PatientId)
                 .OnDelete(DeleteBehavior.Cascade); // Додаємо каскадне видалення
         }
+        
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
