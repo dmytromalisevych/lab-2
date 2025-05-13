@@ -4,8 +4,15 @@ namespace HospitalAppointmentSystem.Models.ViewModels
     {
         public int DoctorsCount { get; set; }
         public int PatientsCount { get; set; }
-        public int TotalAppointments { get; set; }
         public int ScheduledAppointments { get; set; }
-        public List<Appointment> UpcomingAppointments { get; set; }
+        public int TotalAppointments { get; set; }
+        public IEnumerable<Appointment> UpcomingAppointments { get; set; }
+        public Dictionary<string, int> DoctorsBySpecialization { get; set; }
+
+        public HomeViewModel()
+        {
+            UpcomingAppointments = new List<Appointment>();
+            DoctorsBySpecialization = new Dictionary<string, int>();
+        }
     }
 }

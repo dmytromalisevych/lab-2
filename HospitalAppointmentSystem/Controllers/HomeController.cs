@@ -1,80 +1,40 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using HospitalAppointmentSystem.Models;
 using HospitalAppointmentSystem.Models.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalAppointmentSystem.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
             _context = context;
         }
 
-        public IActionResult Index(int page = 1)
+        public async Task<IActionResult> Index()
         {
-            int pageSize = 10; // Кількість записів на сторінці
+            var viewModel = new HomeViewModel
+            {
+                DoctorsCount = await _context.Doctors.CountAsync(),
+                PatientsCount = await _context.Patients.CountAsync(),
+                ScheduledAppointments = await _context.Appointments
+                    .CountAsync(a => a.Status == AppointmentStatus.Scheduled),
+                TotalAppointments = await _context.Appointments.CountAsync(),
+                UpcomingAppointments = await _context.Appointments
+                    .Include(a => a.Doctor)
+                    .Include(a => a.Patient)
+                    .Where(a => a.AppointmentDateTime.Date >= DateTime.Today)
+                    .OrderBy(a => a.AppointmentDateTime)
+                    .ToListAsync(),
+                DoctorsBySpecialization = await _context.Doctors
+                    .GroupBy(d => d.Specialization)
+                    .ToDictionaryAsync(g => g.Key, g => g.Count())
+            };
 
-            int doctorsCount = _context.Doctors.Count();
-            int patientsCount = _context.Patients.Count();
-            int appointmentsCount = _context.Appointments.Count();
-            
-            // Зберігаємо статистику у ViewBag для зручності використання у представленні
-            ViewBag.DoctorsCount = doctorsCount;
-            ViewBag.PatientsCount = patientsCount;
-            ViewBag.AppointmentsCount = appointmentsCount;
-            
-            var upcomingAppointments = _context.Appointments
-                .Where(a => a.Status == AppointmentStatus.Scheduled && a.AppointmentDateTime > DateTime.Now)
-                .OrderBy(a => a.AppointmentDateTime)
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToList();
-                
-            foreach (var appointment in upcomingAppointments)
-            {
-                appointment.Doctor = _context.Doctors.FirstOrDefault(d => d.DoctorId == appointment.DoctorId);
-                appointment.Patient = _context.Patients.FirstOrDefault(p => p.PatientId == appointment.PatientId);
-            }
-            
-            // Створюємо об'єкт PagingInfo для пагінації
-            PagingInfo pagingInfo = new PagingInfo
-            {
-                CurrentPage = page,
-                ItemsPerPage = pageSize,
-                TotalItems = appointmentsCount
-            };
-            
-            // Створюємо об'єкт ViewModel і заповнюємо його даними
-            var viewModel = new AppointmentsListViewModel
-            {
-                Appointments = upcomingAppointments,
-                PagingInfo = pagingInfo,
-                TotalAppointments = appointmentsCount,
-            };
-            
             return View(viewModel);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

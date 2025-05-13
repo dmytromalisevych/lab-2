@@ -22,8 +22,7 @@ namespace HospitalAppointmentSystem.Models
         public string Specialization { get; set; }
 
         public string FullName => $"{LastName} {FirstName}";
-
-        // Змінюємо на nullable колекцію
+        
         public virtual ICollection<Appointment>? Appointments { get; set; }
     }
 }

@@ -36,17 +36,29 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-p4LnRBA1TR5aN/HKQXI6EikxVM\u002BGo04LEzVKTYPglqU="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1094"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022p4LnRBA1TR5aN/HKQXI6EikxVM\u002BGo04LEzVKTYPglqU=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 13:39:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HospitalAppointmentSystem/js/site.acfgdasmzy.js">
+    <StaticWebAssetEndpoint Include="_content/HospitalAppointmentSystem/js/appointment-form.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\appointment-form.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IwKjAHKcyRX9reNVh85wxKVBGuPywVn9fw6C24KTPk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"419"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00221IwKjAHKcyRX9reNVh85wxKVBGuPywVn9fw6C24KTPk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 12 May 2025 19:24:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HospitalAppointmentSystem/js/appointment-form.s6ucdnwmob.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\appointment-form.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"s6ucdnwmob"},{"Name":"integrity","Value":"sha256-1IwKjAHKcyRX9reNVh85wxKVBGuPywVn9fw6C24KTPk="},{"Name":"label","Value":"_content/HospitalAppointmentSystem/js/appointment-form.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"419"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00221IwKjAHKcyRX9reNVh85wxKVBGuPywVn9fw6C24KTPk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 12 May 2025 19:24:39 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HospitalAppointmentSystem/js/site.3r8b2a0bt1.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"acfgdasmzy"},{"Name":"integrity","Value":"sha256-qoZNH86ZPPJKZcUzSLrja2vUU\u002Bbb5LSw0568BqBZ0A4="},{"Name":"label","Value":"_content/HospitalAppointmentSystem/js/site.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9983"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022qoZNH86ZPPJKZcUzSLrja2vUU\u002Bbb5LSw0568BqBZ0A4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 19:11:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3r8b2a0bt1"},{"Name":"integrity","Value":"sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="},{"Name":"label","Value":"_content/HospitalAppointmentSystem/js/site.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00228ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:48:50 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HospitalAppointmentSystem/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-qoZNH86ZPPJKZcUzSLrja2vUU\u002Bbb5LSw0568BqBZ0A4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"9983"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022qoZNH86ZPPJKZcUzSLrja2vUU\u002Bbb5LSw0568BqBZ0A4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 02 May 2025 19:11:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00228ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:48:50 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HospitalAppointmentSystem/lib/bootstrap/dist/css/bootstrap-grid.bqjiyaj88i.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css'))</AssetFile>

@@ -1,59 +1,146 @@
-﻿@model HospitalAppointmentSystem.Models.ViewModels.AppointmentsListViewModel
-
+﻿@model HomeViewModel
 @{
-    ViewData["Title"] = "Призначення";
+    ViewData["Title"] = "Головна";
 }
 
-<h2>Призначення</h2>
-
-<p>
-    <a asp-controller="Appointments" asp-action="Create" class="btn btn-primary">Створити нове призначення</a>
-</p>
-
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Пацієнт</th>
-        <th>Лікар</th>
-        <th>Дата</th>
-        <th>Статус</th>
-        <th>Дії</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var appointment in Model.Appointments)
-    {
-        <tr>    
-            <td>@appointment.Patient.FullName</td>
-            <td>@appointment.Doctor.FullName</td>
-            <td>@appointment.AppointmentDateTime.ToString("dd.MM.yyyy HH:mm")</td>
-            <td>@appointment.Status</td>
-            <td>
-                <div class="btn-group">
-                    <a asp-controller="Appointments" asp-action="Details" asp-route-id="@appointment.AppointmentId" class="btn btn-info btn-sm">
-                        <i class="fa fa-info-circle"></i> Деталі
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-user-md me-2"></i>Лікарі
+                    </h5>
+                    <h2 class="card-text">@Model.DoctorsCount</h2>
+                    <a asp-controller="Doctors" asp-action="Index" class="text-white">
+                        <small>Переглянути всіх <i class="fas fa-arrow-right"></i></small>
                     </a>
-                    <a asp-controller="Appointments" asp-action="Edit" asp-route-id="@appointment.AppointmentId" class="btn btn-warning btn-sm mx-1">
-                        <i class="fa fa-edit"></i> Редагувати
-                    </a>
-                    <a asp-controller="Appointments" asp-action="Delete" asp-route-id="@appointment.AppointmentId" class="btn btn-danger btn-sm">
-                        <i class="fa fa-trash"></i> Видалити
-                    </a>
-                    @if (appointment.Status != AppointmentStatus.Cancelled)
-                    {
-                        <a asp-controller="Appointments" asp-action="Cancel" asp-route-id="@appointment.AppointmentId" class="btn btn-secondary btn-sm ms-1"
-                           onclick="return confirm('Ви впевнені, що хочете скасувати це призначення?');">
-                            <i class="fa fa-ban"></i> Скасувати
-                        </a>
-                    }
                 </div>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-users me-2"></i>Пацієнти
+                    </h5>
+                    <h2 class="card-text">@Model.PatientsCount</h2>
+                    <a asp-controller="Patients" asp-action="Index" class="text-white">
+                        <small>Переглянути всіх <i class="fas fa-arrow-right"></i></small>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-calendar-check me-2"></i>Сьогоднішні прийоми
+                    </h5>
+                    <h2 class="card-text">
+                        @Model.UpcomingAppointments.Count(a => a.AppointmentDateTime.Date == DateTime.Today)
+                    </h2>
+                    <a asp-controller="Appointments" asp-action="Index" class="text-white">
+                        <small>Переглянути всі <i class="fas fa-arrow-right"></i></small>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-secondary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-clipboard-list me-2"></i>Всього прийомів
+                    </h5>
+                    <h2 class="card-text">@Model.TotalAppointments</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>Статистика прийомів
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <h6>Заплановані</h6>
+                                <h3 class="text-primary">@Model.ScheduledAppointments</h3>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <h6>Завершені</h6>
+                                <h3 class="text-success">
+                                    @(Model.TotalAppointments - Model.ScheduledAppointments)
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title mb-0">
+                <i class="fas fa-calendar-day me-2"></i>Розклад на сьогодні
+            </h5>
+        </div>
+        <div class="card-body">
+            @{
+                var todayAppointments = Model.UpcomingAppointments
+                    .Where(a => a.AppointmentDateTime.Date == DateTime.Today)
+                    .OrderBy(a => a.AppointmentDateTime);
+            }
 
-<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
-     page-class="page-item" page-class-normal="page-link" page-class-selected="active"
-     class="d-flex justify-content-center">
+            @if (!todayAppointments.Any())
+            {
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>На сьогодні немає запланованих прийомів
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Час</th>
+                            <th>Пацієнт</th>
+                            <th>Лікар</th>
+                            <th>Спеціалізація</th>
+                            <th>Статус</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var appointment in todayAppointments)
+                        {
+                            <tr>
+                                <td>@appointment.AppointmentDateTime.ToString("HH:mm")</td>
+                                <td>@appointment.Patient.FullName</td>
+                                <td>@appointment.Doctor.FullName</td>
+                                <td>@appointment.Doctor.Specialization</td>
+                                <td>
+                                        <span class="badge bg-@(appointment.Status == AppointmentStatus.Scheduled ? "primary" :
+                                                              appointment.Status == AppointmentStatus.Completed ? "success" :
+                                                              "danger")">
+                                            @appointment.Status
+                                        </span>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
 </div>

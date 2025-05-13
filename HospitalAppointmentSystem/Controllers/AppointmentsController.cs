@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using HospitalAppointmentSystem.Models;
 using HospitalAppointmentSystem.Models.ViewModels;
+using HospitalAppointmentSystem.Infrastructure;
 
 namespace HospitalAppointmentSystem.Controllers
 {
@@ -14,298 +10,221 @@ namespace HospitalAppointmentSystem.Controllers
     {
         private readonly AppDbContext _context;
         private readonly ILogger<AppointmentsController> _logger;
-        private readonly int _pageSize = 10;
+        private readonly FileSessionStorage _fileStorage;
+        private const string APPOINTMENT_DRAFT_KEY = "AppointmentDraft";
 
-        public AppointmentsController(AppDbContext context, ILogger<AppointmentsController> logger)
+        public AppointmentsController(
+            AppDbContext context,
+            ILogger<AppointmentsController> logger,
+            FileSessionStorage fileStorage)
         {
             _context = context;
             _logger = logger;
+            _fileStorage = fileStorage;
         }
 
         // GET: Appointments
-        public async Task<IActionResult> Index(string searchString, string status, int page = 1)
+        public async Task<IActionResult> Index()
         {
             try
             {
-                var appointmentsQuery = _context.Appointments
+                var appointments = await _context.Appointments
                     .Include(a => a.Doctor)
                     .Include(a => a.Patient)
-                    .AsQueryable();
-
-                // Фільтрація за статусом
-                if (!string.IsNullOrEmpty(status))
-                {
-                    if (Enum.TryParse<AppointmentStatus>(status, out var appointmentStatus))
-                    {
-                        appointmentsQuery = appointmentsQuery.Where(a => a.Status == appointmentStatus);
-                    }
-                }
-
-                // Пошук
-                if (!string.IsNullOrEmpty(searchString))
-                {
-                    appointmentsQuery = appointmentsQuery.Where(a =>
-                        a.Doctor.LastName.Contains(searchString) ||
-                        a.Doctor.FirstName.Contains(searchString) ||
-                        a.Patient.LastName.Contains(searchString) ||
-                        a.Patient.FirstName.Contains(searchString) ||
-                        a.Notes.Contains(searchString));
-                }
-
-                // Отримуємо загальну кількість записів
-                var totalItems = await appointmentsQuery.CountAsync();
-
-                // Пагінація
-                var appointments = await appointmentsQuery
                     .OrderByDescending(a => a.AppointmentDateTime)
-                    .Skip((page - 1) * _pageSize)
-                    .Take(_pageSize)
                     .ToListAsync();
 
-                var viewModel = new AppointmentsListViewModel
+                var viewModel = new AppointmentListViewModel
                 {
                     Appointments = appointments,
-                    PagingInfo = new PagingInfo
-                    {
-                        CurrentPage = page,
-                        ItemsPerPage = _pageSize,
-                        TotalItems = totalItems
-                    },
-                    CurrentStatus = status,
-                    SearchString = searchString
+                    TotalAppointments = appointments.Count,
+                    ScheduledAppointments = appointments.Count(a => a.Status == AppointmentStatus.Scheduled),
+                    CompletedAppointments = appointments.Count(a => a.Status == AppointmentStatus.Completed)
                 };
-
-                // Додаємо статистику для відображення
-                viewModel.TotalAppointments = totalItems;
-                viewModel.ScheduledAppointments = await appointmentsQuery.CountAsync(a => a.Status == AppointmentStatus.Scheduled);
-                viewModel.CompletedAppointments = await appointmentsQuery.CountAsync(a => a.Status == AppointmentStatus.Completed);
 
                 return View(viewModel);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Помилка при отриманні списку призначень: {ex.Message}");
-                TempData["Error"] = "Виникла помилка при завантаженні даних";
-                return View(new AppointmentsListViewModel());
+                _logger.LogError($"Error in Index: {ex.Message}");
+                return View(new AppointmentListViewModel());
             }
         }
 
         // GET: Appointments/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             try
             {
-                ViewBag.Doctors = _context.Doctors.OrderBy(d => d.LastName).ToList();
-                ViewBag.Patients = _context.Patients.OrderBy(p => p.LastName).ToList();
-                return View(new Appointment { AppointmentDateTime = DateTime.Now.AddDays(1) });
+                var draft = _fileStorage.Load<AppointmentDraft>(HttpContext.Session.Id) ?? 
+                           HttpContext.Session.GetJson<AppointmentDraft>(APPOINTMENT_DRAFT_KEY);
+
+                var viewModel = new AppointmentCreateViewModel
+                {
+                    PatientId = draft?.PatientId ?? 0,
+                    DoctorId = draft?.DoctorId ?? 0,
+                    AppointmentDateTime = draft?.AppointmentDateTime ?? DateTime.Now.Date.AddDays(1).AddHours(9),
+                    Notes = draft?.Notes,
+                    Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync(),
+                    Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync()
+                };
+
+                return View(viewModel);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Помилка при відкритті форми створення: {ex.Message}");
-                TempData["Error"] = "Виникла помилка при завантаженні форми";
+                _logger.LogError($"Error in Create GET: {ex.Message}");
                 return RedirectToAction(nameof(Index));
+            }
+        }
+
+        [HttpPost]
+        public IActionResult SaveDraft([FromForm] AppointmentCreateViewModel model)
+        {
+            try
+            {
+                var draft = new AppointmentDraft
+                {
+                    PatientId = model.PatientId,
+                    DoctorId = model.DoctorId,
+                    AppointmentDateTime = model.AppointmentDateTime,
+                    Notes = model.Notes,
+                    CreatedAt = DateTime.UtcNow
+                };
+                
+                HttpContext.Session.SetJson(APPOINTMENT_DRAFT_KEY, draft);
+                _fileStorage.Save(HttpContext.Session.Id, draft);
+
+                return Json(new { success = true, message = "Чернетку збережено" });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error saving draft: {ex.Message}");
+                return Json(new { success = false, message = "Помилка збереження чернетки" });
+            }
+        }
+
+        public async Task<IActionResult> ResumeDraft()
+        {
+            try
+            {
+                var draft = _fileStorage.Load<AppointmentDraft>(HttpContext.Session.Id) ??
+                           HttpContext.Session.GetJson<AppointmentDraft>(APPOINTMENT_DRAFT_KEY);
+
+                if (draft == null)
+                {
+                    return RedirectToAction(nameof(Create));
+                }
+
+                var viewModel = new AppointmentCreateViewModel
+                {
+                    PatientId = draft.PatientId ?? 0,
+                    DoctorId = draft.DoctorId ?? 0,
+                    AppointmentDateTime = draft.AppointmentDateTime ?? DateTime.Now.Date.AddDays(1).AddHours(9),
+                    Notes = draft.Notes,
+                    Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync(),
+                    Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync()
+                };
+                
+                HttpContext.Session.SetJson(APPOINTMENT_DRAFT_KEY, draft);
+
+                return View("Create", viewModel);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error resuming draft: {ex.Message}");
+                return RedirectToAction(nameof(Create));
             }
         }
 
         // POST: Appointments/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DoctorId,PatientId,AppointmentDateTime,Notes")] Appointment appointment)
+        public async Task<IActionResult> Create([Bind("PatientId,DoctorId,AppointmentDateTime,Notes")] AppointmentCreateViewModel model)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    // Перевірка на дублікати
+                    var appointmentTime = model.AppointmentDateTime.TimeOfDay;
+                    if (appointmentTime < new TimeSpan(9, 0, 0) || appointmentTime >= new TimeSpan(18, 0, 0))
+                    {
+                        ModelState.AddModelError("AppointmentDateTime", "Час прийому має бути між 9:00 та 18:00");
+                        model.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
+                        model.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
+                        return View(model);
+                    }
+
                     var existingAppointment = await _context.Appointments
-                        .AnyAsync(a => a.DoctorId == appointment.DoctorId &&
-                                     a.AppointmentDateTime == appointment.AppointmentDateTime);
+                        .AnyAsync(a => a.DoctorId == model.DoctorId &&
+                                     a.AppointmentDateTime == model.AppointmentDateTime &&
+                                     a.Status == AppointmentStatus.Scheduled);
 
                     if (existingAppointment)
                     {
                         ModelState.AddModelError("", "На цей час вже є запис до даного лікаря");
-                        ViewBag.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
-                        ViewBag.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
-                        return View(appointment);
+                        model.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
+                        model.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
+                        return View(model);
                     }
 
-                    appointment.Status = AppointmentStatus.Scheduled;
+                    var appointment = new Appointment
+                    {
+                        DoctorId = model.DoctorId,
+                        PatientId = model.PatientId,
+                        AppointmentDateTime = model.AppointmentDateTime,
+                        Notes = model.Notes,
+                        Status = AppointmentStatus.Scheduled
+                    };
+
                     _context.Add(appointment);
                     await _context.SaveChangesAsync();
-                    TempData["Success"] = "Призначення успішно створено";
+                    
+                    ClearDraft();
+
                     return RedirectToAction(nameof(Index));
                 }
+
+                model.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
+                model.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
+                return View(model);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Помилка при створенні призначення: {ex.Message}");
+                _logger.LogError($"Error in Create POST: {ex.Message}");
                 ModelState.AddModelError("", "Виникла помилка при створенні призначення");
+                model.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
+                model.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
+                return View(model);
             }
-
-            ViewBag.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
-            ViewBag.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
-            return View(appointment);
         }
-
-        // GET: Appointments/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var appointment = await _context.Appointments
-                .Include(a => a.Doctor)
-                .Include(a => a.Patient)
-                .FirstOrDefaultAsync(m => m.AppointmentId == id);
-
-            if (appointment == null)
-            {
-                return NotFound();
-            }
-
-            ViewBag.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
-            ViewBag.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
-            return View(appointment);
-        }
-
-        // POST: Appointments/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AppointmentId,DoctorId,PatientId,AppointmentDateTime,Status,Notes")] Appointment appointment)
-        {
-            if (id != appointment.AppointmentId)
-            {
-                return NotFound();
-            }
-
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    // Перевірка на дублікати
-                    var existingAppointment = await _context.Appointments
-                        .AnyAsync(a => a.DoctorId == appointment.DoctorId &&
-                                     a.AppointmentDateTime == appointment.AppointmentDateTime &&
-                                     a.AppointmentId != appointment.AppointmentId);
-
-                    if (existingAppointment)
-                    {
-                        ModelState.AddModelError("", "На цей час вже є запис до даного лікаря");
-                        ViewBag.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
-                        ViewBag.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
-                        return View(appointment);
-                    }
-
-                    _context.Update(appointment);
-                    await _context.SaveChangesAsync();
-                    TempData["Success"] = "Призначення успішно оновлено";
-                    return RedirectToAction(nameof(Index));
-                }
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AppointmentExists(appointment.AppointmentId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Помилка при оновленні призначення: {ex.Message}");
-                ModelState.AddModelError("", "Виникла помилка при оновленні призначення");
-            }
-
-            ViewBag.Doctors = await _context.Doctors.OrderBy(d => d.LastName).ToListAsync();
-            ViewBag.Patients = await _context.Patients.OrderBy(p => p.LastName).ToListAsync();
-            return View(appointment);
-        }
-
-        // GET: Appointments/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var appointment = await _context.Appointments
-                .Include(a => a.Doctor)
-                .Include(a => a.Patient)
-                .FirstOrDefaultAsync(m => m.AppointmentId == id);
-
-            if (appointment == null)
-            {
-                return NotFound();
-            }
-
-            return View(appointment);
-        }
-
         // POST: Appointments/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             try
             {
                 var appointment = await _context.Appointments.FindAsync(id);
-                if (appointment == null)
+                if (appointment != null)
                 {
-                    return NotFound();
+                    _context.Appointments.Remove(appointment);
+                    await _context.SaveChangesAsync();
+                    _logger.LogInformation($"Deleted appointment: {id}");
                 }
-
-                _context.Appointments.Remove(appointment);
-                await _context.SaveChangesAsync();
-                TempData["Success"] = "Призначення успішно видалено";
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Помилка при видаленні призначення: {ex.Message}");
-                TempData["Error"] = "Виникла помилка при видаленні призначення";
+                _logger.LogError($"Error deleting appointment {id}: {ex.Message}");
+                return RedirectToAction(nameof(Index));
             }
-
-            return RedirectToAction(nameof(Index));
         }
-
-        // Допоміжні методи
-        private bool AppointmentExists(int id)
+        private void ClearDraft()
         {
-            return _context.Appointments.Any(e => e.AppointmentId == id);
-        }
-
-        // GET: Appointments/Calendar
-        public IActionResult Calendar()
-        {
-            return View();
-        }
-
-        // API метод для отримання призначень для календаря
-        [HttpGet]
-        public async Task<JsonResult> GetAppointments(DateTime start, DateTime end)
-        {
-            var appointments = await _context.Appointments
-                .Include(a => a.Doctor)
-                .Include(a => a.Patient)
-                .Where(a => a.AppointmentDateTime >= start && a.AppointmentDateTime <= end)
-                .Select(a => new
-                {
-                    id = a.AppointmentId,
-                    title = $"{a.Patient.FullName} - {a.Doctor.FullName}",
-                    start = a.AppointmentDateTime,
-                    end = a.AppointmentDateTime.AddMinutes(30),
-                    status = a.Status.ToString(),
-                    className = a.Status == AppointmentStatus.Completed ? "bg-success" :
-                               a.Status == AppointmentStatus.Cancelled ? "bg-danger" : "bg-primary"
-                })
-                .ToListAsync();
-
-            return Json(appointments);
+            var sessionId = HttpContext.Session.Id;
+            HttpContext.Session.Remove(APPOINTMENT_DRAFT_KEY);
+            _fileStorage.Delete(sessionId);
         }
     }
 }

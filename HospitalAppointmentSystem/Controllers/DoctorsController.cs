@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using HospitalAppointmentSystem.Models;
 using HospitalAppointmentSystem.Models.ViewModels;
+
 
 namespace HospitalAppointmentSystem.Controllers
 {
@@ -30,8 +26,7 @@ namespace HospitalAppointmentSystem.Controllers
                 var doctorsQuery = _context.Doctors
                     .Include(d => d.Appointments)
                     .AsQueryable();
-
-                // Пошук за ім'ям або спеціалізацією
+                
                 if (!string.IsNullOrEmpty(searchString))
                 {
                     doctorsQuery = doctorsQuery.Where(d =>
@@ -39,24 +34,20 @@ namespace HospitalAppointmentSystem.Controllers
                         d.LastName.Contains(searchString) ||
                         d.Specialization.Contains(searchString));
                 }
-
-                // Фільтрація за спеціалізацією
+                
                 if (!string.IsNullOrEmpty(specialization))
                 {
                     doctorsQuery = doctorsQuery.Where(d => d.Specialization == specialization);
                 }
-
-                // Отримуємо загальну кількість
+                
                 var totalItems = await doctorsQuery.CountAsync();
-
-                // Отримуємо лікарів для поточної сторінки
+                
                 var doctors = await doctorsQuery
                     .OrderBy(d => d.LastName)
                     .Skip((page - 1) * _pageSize)
                     .Take(_pageSize)
                     .ToListAsync();
-
-                // Отримуємо список всіх спеціалізацій для фільтра
+                
                 var specializations = await _context.Doctors
                     .Select(d => d.Specialization)
                     .Distinct()
@@ -106,8 +97,7 @@ namespace HospitalAppointmentSystem.Controllers
                 {
                     return NotFound();
                 }
-
-                // Отримуємо активні призначення лікаря
+                
                 var activeAppointments = await _context.Appointments
                     .Include(a => a.Patient)
                     .Where(a => a.DoctorId == id && 
@@ -154,11 +144,9 @@ namespace HospitalAppointmentSystem.Controllers
                 {
                     try
                     {
-                        // Додаємо лікаря
                         _context.Doctors.Add(doctor);
                         await _context.SaveChangesAsync();
-                
-                        // Підтверджуємо транзакцію
+                        
                         await transaction.CommitAsync();
                 
                         _logger.LogInformation($"Лікаря успішно додано: {doctor.FullName}");
@@ -169,7 +157,7 @@ namespace HospitalAppointmentSystem.Controllers
                     catch (Exception ex)
                     {
                         await transaction.RollbackAsync();
-                        throw; // Перекидаємо виключення для обробки в зовнішньому блоці catch
+                        throw; 
                     }
                 }
             }
@@ -225,7 +213,6 @@ namespace HospitalAppointmentSystem.Controllers
                 {
                     if (ModelState.IsValid)
                     {
-                        // Перевіряємо чи існує лікар
                         var existingDoctor = await _context.Doctors
                             .Include(d => d.Appointments)
                             .FirstOrDefaultAsync(d => d.DoctorId == id);
@@ -234,8 +221,7 @@ namespace HospitalAppointmentSystem.Controllers
                         {
                             return NotFound();
                         }
-
-                        // Оновлюємо тільки потрібні поля
+                        
                         existingDoctor.FirstName = doctor.FirstName;
                         existingDoctor.LastName = doctor.LastName;
                         existingDoctor.Specialization = doctor.Specialization;
@@ -288,8 +274,7 @@ namespace HospitalAppointmentSystem.Controllers
                 {
                     return NotFound();
                 }
-
-                // Перевіряємо, чи є активні призначення
+                
                 if (doctor.Appointments.Any(a => a.Status == AppointmentStatus.Scheduled))
                 {
                     TempData["Error"] = "Неможливо видалити лікаря з активними призначеннями";
@@ -323,22 +308,19 @@ namespace HospitalAppointmentSystem.Controllers
                     {
                         return NotFound();
                     }
-
-                    // Перевіряємо, чи є активні призначення
+                    
                     if (doctor.Appointments.Any(a => a.Status == AppointmentStatus.Scheduled))
                     {
                         TempData["Error"] = "Неможливо видалити лікаря з активними призначеннями";
                         return RedirectToAction(nameof(Index));
                     }
-
-                    // Видаляємо всі призначення лікаря
+                    
                     var appointments = await _context.Appointments
                         .Where(a => a.DoctorId == id)
                         .ToListAsync();
 
                     _context.Appointments.RemoveRange(appointments);
-
-                    // Видаляємо лікаря
+                    
                     _context.Doctors.Remove(doctor);
                     await _context.SaveChangesAsync();
                     await transaction.CommitAsync();

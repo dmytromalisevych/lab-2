@@ -1,29 +1,32 @@
 @model Patient
+@{
+    ViewData["Title"] = "Редагування пацієнта";
+}
 
 <div class="container-fluid">
-    <h2>Редагувати пацієнта</h2>
+    <h2>@ViewData["Title"]</h2>
     <hr />
 
     <div class="row">
         <div class="col-md-6">
-            <form asp-action="Edit">
+            <form asp-action="Edit" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="PatientId" />
 
                 <div class="form-group mb-3">
-                    <label asp-for="LastName" class="control-label">Прізвище</label>
+                    <label asp-for="LastName" class="form-label">Прізвище</label>
                     <input asp-for="LastName" class="form-control" />
                     <span asp-validation-for="LastName" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label asp-for="FirstName" class="control-label">Ім'я</label>
+                    <label asp-for="FirstName" class="form-label">Ім'я</label>
                     <input asp-for="FirstName" class="form-control" />
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-3">
-                    <label asp-for="DateOfBirth" class="control-label">Дата народження</label>
+                    <label asp-for="DateOfBirth" class="form-label">Дата народження</label>
                     <input asp-for="DateOfBirth" class="form-control" type="date" />
                     <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                 </div>

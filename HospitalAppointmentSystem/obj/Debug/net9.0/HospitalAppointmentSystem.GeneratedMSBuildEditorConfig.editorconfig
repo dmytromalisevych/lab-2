@@ -17,97 +17,97 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HospitalAppointmentSystem
 build_property.RootNamespace = HospitalAppointmentSystem
-build_property.ProjectDir = /Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/
+build_property.ProjectDir = /Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem
+build_property.MSBuildProjectDirectory = /Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Appointments/Create.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Appointments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnRzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Appointments/Delete.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Appointments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnRzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Appointments/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnRzL0RldGFpbHMuY3NodG1s
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Appointments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnRzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Appointments/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBwb2ludG1lbnRzL0VkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Doctors/Create.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Doctors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Doctors/Delete.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Doctors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Doctors/Details.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Doctors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Doctors/Edit.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Doctors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Doctors/Index.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Doctors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRG9jdG9ycy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Home/Index.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Home/Privacy.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Patients/Create.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Patients/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Patients/Delete.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Patients/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Patients/Details.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Patients/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Patients/Edit.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Patients/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Patients/Index.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Patients/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGF0aWVudHMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Shared/Error.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Shared/_AppointmentSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BcHBvaW50bWVudFN1bW1hcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/_ViewImports.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/_ViewStart.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dmytromalisevych/Desktop/Унік/Другий курс/Другий семестр/Конструювання програмного забезпечення/lab-2/HospitalAppointmentSystem/Views/Shared/_Layout.cshtml]
+[/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2sorcba6d5

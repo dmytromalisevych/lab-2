@@ -48,6 +48,45 @@ namespace HospitalAppointmentSystem.Migrations
                     b.ToTable("Appointments");
                 });
 
+            modelBuilder.Entity("HospitalAppointmentSystem.Models.AppointmentDraft", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("AppointmentDateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("LastUpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("PatientId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("SessionId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("PatientId");
+
+                    b.HasIndex("SessionId");
+
+                    b.ToTable("AppointmentDrafts");
+                });
+
             modelBuilder.Entity("HospitalAppointmentSystem.Models.Doctor", b =>
                 {
                     b.Property<int>("DoctorId")
@@ -56,44 +95,22 @@ namespace HospitalAppointmentSystem.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
                         .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Specialization")
                         .IsRequired()
+                        .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
                     b.HasKey("DoctorId");
 
                     b.ToTable("Doctors");
-                });
-
-            modelBuilder.Entity("HospitalAppointmentSystem.Models.DoctorAvailability", b =>
-                {
-                    b.Property<int>("DoctorAvailabilityId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("DayOfWeek")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("DoctorId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<TimeSpan>("EndTime")
-                        .HasColumnType("TEXT");
-
-                    b.Property<TimeSpan>("StartTime")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("DoctorAvailabilityId");
-
-                    b.HasIndex("DoctorId");
-
-                    b.ToTable("DoctorAvailability");
                 });
 
             modelBuilder.Entity("HospitalAppointmentSystem.Models.Patient", b =>
@@ -118,6 +135,29 @@ namespace HospitalAppointmentSystem.Migrations
                     b.ToTable("Patients");
                 });
 
+            modelBuilder.Entity("HospitalAppointmentSystem.Models.SessionData", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("AbsoluteExpiration")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("ExpiresAtTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<long?>("SlidingExpirationInSeconds")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<byte[]>("Value")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sessions", (string)null);
+                });
+
             modelBuilder.Entity("HospitalAppointmentSystem.Models.Appointment", b =>
                 {
                     b.HasOne("HospitalAppointmentSystem.Models.Doctor", "Doctor")
@@ -137,22 +177,28 @@ namespace HospitalAppointmentSystem.Migrations
                     b.Navigation("Patient");
                 });
 
-            modelBuilder.Entity("HospitalAppointmentSystem.Models.DoctorAvailability", b =>
+            modelBuilder.Entity("HospitalAppointmentSystem.Models.AppointmentDraft", b =>
                 {
                     b.HasOne("HospitalAppointmentSystem.Models.Doctor", "Doctor")
-                        .WithMany("Availabilities")
+                        .WithMany()
                         .HasForeignKey("DoctorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("HospitalAppointmentSystem.Models.Patient", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
                 });
 
             modelBuilder.Entity("HospitalAppointmentSystem.Models.Doctor", b =>
                 {
                     b.Navigation("Appointments");
-
-                    b.Navigation("Availabilities");
                 });
 
             modelBuilder.Entity("HospitalAppointmentSystem.Models.Patient", b =>
