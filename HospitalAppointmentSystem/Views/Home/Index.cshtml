@@ -2,9 +2,21 @@
 @{
     ViewData["Title"] = "Головна";
 }
-
 <div class="container-fluid">
     <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-user-md me-2"></i>Лікарі
+                    </h5>
+                    <h2 class="card-text">@Model.DoctorsCount</h2>
+                    <a asp-controller="Doctors" asp-action="Index" class="text-white">
+                        <small>Переглянути всіх <i class="fas fa-arrow-right"></i></small>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="col-md-3">
             <div class="card bg-primary text-white">
                 <div class="card-body">
@@ -41,6 +53,19 @@
                         @Model.UpcomingAppointments.Count(a => a.AppointmentDateTime.Date == DateTime.Today)
                     </h2>
                     <a asp-controller="Appointments" asp-action="Index" class="text-white">
+                        <small>Переглянути всі <i class="fas fa-arrow-right"></i></small>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-notes-medical me-2"></i>Медичні записи
+                    </h5>
+                    <h2 class="card-text">@Model.MedicalRecordsCount</h2>
+                    <a asp-controller="MedicalRecords" asp-action="Index" class="text-white">
                         <small>Переглянути всі <i class="fas fa-arrow-right"></i></small>
                     </a>
                 </div>

@@ -6,6 +6,7 @@ namespace HospitalAppointmentSystem.Models.ViewModels
         public int PatientsCount { get; set; }
         public int ScheduledAppointments { get; set; }
         public int TotalAppointments { get; set; }
+        public int MedicalRecordsCount { get; set; }
         public IEnumerable<Appointment> UpcomingAppointments { get; set; }
         public Dictionary<string, int> DoctorsBySpecialization { get; set; }
 

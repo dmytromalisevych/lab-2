@@ -44,6 +44,12 @@
                             <i class="fas fa-users me-1"></i>Пацієнти
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark @(ViewContext.RouteData.Values["Controller"].ToString() == "MedicalRecords" ? "active" : "")"
+                           asp-controller="MedicalRecords" asp-action="Index">
+                            <i class="fas fa-notes-medical me-1"></i>Медичні записи
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

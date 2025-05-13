@@ -5128,11 +5128,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/HospitalAppointmentSystem.csproj",
+      "projectUniqueName": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/lab-2/HospitalAppointmentSystem/HospitalAppointmentSystem.csproj",
       "projectName": "HospitalAppointmentSystem",
-      "projectPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/HospitalAppointmentSystem.csproj",
+      "projectPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/lab-2/HospitalAppointmentSystem/HospitalAppointmentSystem.csproj",
       "packagesPath": "/Users/dmytromalisevych/.nuget/packages/",
-      "outputPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/HospitalAppointmentSystem/obj/",
+      "outputPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-3/lab-2/HospitalAppointmentSystem/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dmytromalisevych/.nuget/NuGet/NuGet.Config"

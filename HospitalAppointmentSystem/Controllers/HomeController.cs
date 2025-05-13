@@ -20,6 +20,7 @@ namespace HospitalAppointmentSystem.Controllers
             {
                 DoctorsCount = await _context.Doctors.CountAsync(),
                 PatientsCount = await _context.Patients.CountAsync(),
+                MedicalRecordsCount = await _context.MedicalRecords.CountAsync(),
                 ScheduledAppointments = await _context.Appointments
                     .CountAsync(a => a.Status == AppointmentStatus.Scheduled),
                 TotalAppointments = await _context.Appointments.CountAsync(),

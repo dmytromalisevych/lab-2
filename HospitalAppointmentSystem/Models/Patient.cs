@@ -22,5 +22,6 @@ namespace HospitalAppointmentSystem.Models
         public string FullName => $"{LastName} {FirstName}";
 
         public virtual ICollection<Appointment>? Appointments { get; set; }
+        public virtual ICollection<MedicalRecord>? MedicalRecords { get; set; }
     }
 }
