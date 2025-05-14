@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using HospitalAppointmentSystem.Models;
 using HospitalAppointmentSystem.Models.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims; // Додано цей рядок
 
 namespace HospitalAppointmentSystem.Controllers
 {
@@ -29,11 +30,26 @@ namespace HospitalAppointmentSystem.Controllers
                     .Include(a => a.Patient)
                     .Where(a => a.AppointmentDateTime.Date >= DateTime.Today)
                     .OrderBy(a => a.AppointmentDateTime)
-                    .ToListAsync(),
-                DoctorsBySpecialization = await _context.Doctors
-                    .GroupBy(d => d.Specialization)
-                    .ToDictionaryAsync(g => g.Key, g => g.Count())
+                    .ToListAsync()
             };
+
+            if (User.Identity?.IsAuthenticated ?? false)
+            {
+                if (User.IsInRole("Doctor"))
+                {
+                    var doctorId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+                    viewModel.UpcomingAppointments = viewModel.UpcomingAppointments
+                        .Where(a => a.DoctorId == doctorId)
+                        .ToList();
+                }
+                else
+                {
+                    var patientId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+                    viewModel.UpcomingAppointments = viewModel.UpcomingAppointments
+                        .Where(a => a.PatientId == patientId)
+                        .ToList();
+                }
+            }
 
             return View(viewModel);
         }

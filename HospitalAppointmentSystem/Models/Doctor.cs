@@ -20,7 +20,10 @@ namespace HospitalAppointmentSystem.Models
         [Display(Name = "Спеціалізація")]
         [StringLength(100, ErrorMessage = "Спеціалізація не може бути довшою за 100 символів")]
         public string Specialization { get; set; }
+        public string Email { get; set; } = string.Empty;
 
+        [Required]
+        public string PasswordHash { get; set; } = string.Empty;
         public string FullName => $"{LastName} {FirstName}";
         
         public virtual ICollection<Appointment>? Appointments { get; set; }

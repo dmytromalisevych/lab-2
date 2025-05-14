@@ -18,9 +18,14 @@ namespace HospitalAppointmentSystem.Models
         [Display(Name = "Дата народження")]
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
+
+        [Required]
+        public string PasswordHash { get; set; } = string.Empty;
 
         public string FullName => $"{LastName} {FirstName}";
-
         public virtual ICollection<Appointment>? Appointments { get; set; }
         public virtual ICollection<MedicalRecord>? MedicalRecords { get; set; }
     }
