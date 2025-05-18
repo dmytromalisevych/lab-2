@@ -12,12 +12,7 @@ builder.Logging.SetMinimumLevel(LogLevel.Debug);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient 
-{ 
-    BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) 
-});
-
-// Базовий HttpClient
+// Базовий HttpClient (видалено дублювання)
 builder.Services.AddScoped(sp => 
     new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
@@ -28,5 +23,6 @@ builder.Services.AddScoped<ILocalStorageService, LocalStorageService>();
 builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 
+// Виправлено подвійний виклик Build()
 var host = builder.Build();
-await builder.Build().RunAsync();
+await host.RunAsync();

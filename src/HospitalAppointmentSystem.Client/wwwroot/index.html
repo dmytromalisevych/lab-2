@@ -3,10 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Система запису до лікаря - зручний онлайн сервіс для запису на прийом" />
     <title>Система запису до лікаря</title>
     <base href="/" />
-    <link rel="icon" type="image/png" href="favicon.png" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="HospitalAppointmentSystem.Client.styles.css" rel="stylesheet" />
@@ -17,88 +15,21 @@
         <h1>Система запису до лікаря</h1>
         <div style="display:flex; gap:10px; justify-content:center; align-items:center">
             <div class="spinner-border" role="status"></div>
-            <span id="loading-status">Завантаження...</span>
+            <div id="loading-status">Завантаження...</div>
         </div>
     </div>
 </div>
 
-<div id="blazor-error-ui">
+<div id="blazor-error-ui" style="display:none;">
     Виникла неопрацьована помилка.
     <a href="" class="reload">Перезавантажити</a>
     <a class="dismiss">🗙</a>
 </div>
 
+<script src="_framework/blazor.webassembly.js"></script>
 <script>
-    window.addEventListener('load', function() {
-        var loadingStatus = document.getElementById('loading-status');
-        var errorUI = document.getElementById('blazor-error-ui');
-
-        // Перевірка наявності WebAssembly
-        if (!window.WebAssembly) {
-            loadingStatus.textContent = 'Помилка: Ваш браузер не підтримує WebAssembly';
-            return;
-        }
-
-        // Відстеження завантаження Blazor
-        if (window._blazorInitialized) {
-            loadingStatus.textContent = 'Помилка: Додаток вже запущено';
-            return;
-        }
-
-        window._blazorInitialized = true;
-
-        // Додаємо таймаут для виявлення проблем завантаження
-        var loadTimeout = setTimeout(function() {
-            loadingStatus.textContent = 'Помилка: Перевищено час очікування завантаження';
-        }, 30000); // 30 секунд
-
-        // Додаємо обробник помилок
-        window.onerror = function(msg, url, line, col, error) {
-            clearTimeout(loadTimeout);
-            loadingStatus.textContent = `Помилка завантаження додатку`;
-            errorUI.style.display = 'block';
-            console.error('Деталі помилки:', {msg, url, line, col, error});
-            return false;
-        };
-
-        // Додаємо обробник для незахоплених promise rejection
-        window.onunhandledrejection = function(event) {
-            console.error('Незахоплена помилка Promise:', event.reason);
-        };
-    });
-
-    // Додаємо функцію для відслідковування стану завантаження ресурсів Blazor
-    window.blazorProgress = {
-        setProgress: function(percentage) {
-            var loadingStatus = document.getElementById('loading-status');
-            if (loadingStatus) {
-                loadingStatus.textContent = `Завантаження... ${Math.round(percentage)}%`;
-            }
-        }
-    };
-</script>
-
-<script src="_framework/blazor.webassembly.js" autostart="false"></script>
-<script>
-    Blazor.start({
-        loadBootResource: function (type, name, defaultUri, integrity) {
-            if (type !== 'dotnetjs' && type !== 'configuration' && type !== 'manifest') {
-                return (async function () {
-                    const response = await fetch(defaultUri, {
-                        cache: 'no-cache',
-                        integrity: integrity,
-                        headers: { 'blazor-environment': 'Development' }
-                    });
-                    if (!response.ok) {
-                        throw new Error(`Failed to load ${name} (${defaultUri})`);
-                    }
-                    return response;
-                })();
-            }
-        }
-    }).catch(function(err) {
-        document.getElementById('loading-status').textContent = 'Помилка запуску додатку';
-        console.error('Помилка запуску Blazor:', err);
+    window.addEventListener('load', function () {
+        console.log('Сторінка завантажена');
     });
 </script>
 </body>

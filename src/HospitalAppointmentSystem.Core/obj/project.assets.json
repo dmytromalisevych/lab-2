@@ -1777,11 +1777,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Core/HospitalAppointmentSystem.Core.csproj",
+      "projectUniqueName": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Core/HospitalAppointmentSystem.Core.csproj",
       "projectName": "HospitalAppointmentSystem.Core",
-      "projectPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Core/HospitalAppointmentSystem.Core.csproj",
+      "projectPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Core/HospitalAppointmentSystem.Core.csproj",
       "packagesPath": "/Users/dmytromalisevych/.nuget/packages/",
-      "outputPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Core/obj/",
+      "outputPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dmytromalisevych/.nuget/NuGet/NuGet.Config"
@@ -1797,8 +1797,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Shared/HospitalAppointmentSystem.Shared.csproj": {
-              "projectPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Shared/HospitalAppointmentSystem.Shared.csproj"
+            "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Shared/HospitalAppointmentSystem.Shared.csproj": {
+              "projectPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Shared/HospitalAppointmentSystem.Shared.csproj"
             }
           }
         }

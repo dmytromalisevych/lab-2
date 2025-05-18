@@ -1,4 +1,3 @@
-// Controllers/TestController.cs
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalAppointmentSystem.API.Controllers

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Shared/HospitalAppointmentSystem.Shared.csproj",
+      "projectUniqueName": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Shared/HospitalAppointmentSystem.Shared.csproj",
       "projectName": "HospitalAppointmentSystem.Shared",
-      "projectPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Shared/HospitalAppointmentSystem.Shared.csproj",
+      "projectPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Shared/HospitalAppointmentSystem.Shared.csproj",
       "packagesPath": "/Users/dmytromalisevych/.nuget/packages/",
-      "outputPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Shared/obj/",
+      "outputPath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dmytromalisevych/.nuget/NuGet/NuGet.Config"

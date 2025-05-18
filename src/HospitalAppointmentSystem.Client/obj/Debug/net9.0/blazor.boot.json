@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "HospitalAppointmentSystem.Client",
   "resources": {
-    "hash": "sha256-YXvoyPMzQv+UCuMx+iGdtyL14LwARx02fWVkEyBNS2g=",
+    "hash": "sha256-/3uEOAxIYAp9GctFHQ92g/OwVnmNI+X/+Y6hntqEoPo=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.n7we7nbch1.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.waskkzx0nn.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -18,20 +18,19 @@
       "Microsoft.Extensions.Configuration.Json.nn2igycfnm.wasm": "Microsoft.Extensions.Configuration.Json.wasm",
       "Microsoft.Extensions.DependencyInjection.0t6hu68uix.wasm": "Microsoft.Extensions.DependencyInjection.wasm",
       "Microsoft.Extensions.DependencyInjection.Abstractions.mxyhp8w354.wasm": "Microsoft.Extensions.DependencyInjection.Abstractions.wasm",
+      "Microsoft.Extensions.Diagnostics.3dggcz3f5g.wasm": "Microsoft.Extensions.Diagnostics.wasm",
+      "Microsoft.Extensions.Diagnostics.Abstractions.krp2q25ggl.wasm": "Microsoft.Extensions.Diagnostics.Abstractions.wasm",
       "Microsoft.Extensions.FileProviders.Abstractions.t0xgg5v1wp.wasm": "Microsoft.Extensions.FileProviders.Abstractions.wasm",
       "Microsoft.Extensions.FileProviders.Physical.k8mchckl5y.wasm": "Microsoft.Extensions.FileProviders.Physical.wasm",
       "Microsoft.Extensions.FileSystemGlobbing.whx15sk3zg.wasm": "Microsoft.Extensions.FileSystemGlobbing.wasm",
+      "Microsoft.Extensions.Http.nac254jq09.wasm": "Microsoft.Extensions.Http.wasm",
       "Microsoft.Extensions.Logging.r19g4upt09.wasm": "Microsoft.Extensions.Logging.wasm",
       "Microsoft.Extensions.Logging.Abstractions.576c9qdvb8.wasm": "Microsoft.Extensions.Logging.Abstractions.wasm",
       "Microsoft.Extensions.Options.7s85c9su09.wasm": "Microsoft.Extensions.Options.wasm",
+      "Microsoft.Extensions.Options.ConfigurationExtensions.25907k314f.wasm": "Microsoft.Extensions.Options.ConfigurationExtensions.wasm",
       "Microsoft.Extensions.Primitives.cp6sp8t3ma.wasm": "Microsoft.Extensions.Primitives.wasm",
-      "Microsoft.IdentityModel.Abstractions.tb2vayak7k.wasm": "Microsoft.IdentityModel.Abstractions.wasm",
-      "Microsoft.IdentityModel.JsonWebTokens.gczu46jt0r.wasm": "Microsoft.IdentityModel.JsonWebTokens.wasm",
-      "Microsoft.IdentityModel.Logging.oji6jat07v.wasm": "Microsoft.IdentityModel.Logging.wasm",
-      "Microsoft.IdentityModel.Tokens.y7rnt1lnvp.wasm": "Microsoft.IdentityModel.Tokens.wasm",
       "Microsoft.JSInterop.fzaop883yy.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.v1y0duelx8.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
-      "System.IdentityModel.Tokens.Jwt.77v3p6q117.wasm": "System.IdentityModel.Tokens.Jwt.wasm",
       "Microsoft.CSharp.0krj4ve566.wasm": "Microsoft.CSharp.wasm",
       "Microsoft.VisualBasic.Core.bcw8auwqwc.wasm": "Microsoft.VisualBasic.Core.wasm",
       "Microsoft.VisualBasic.ezua2clavb.wasm": "Microsoft.VisualBasic.wasm",
@@ -210,8 +209,8 @@
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
       "HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm": "HospitalAppointmentSystem.Shared.wasm",
       "HospitalAppointmentSystem.Shared.d31k0zddk3.pdb": "HospitalAppointmentSystem.Shared.pdb",
-      "HospitalAppointmentSystem.Client.xzvnnhme6z.wasm": "HospitalAppointmentSystem.Client.wasm",
-      "HospitalAppointmentSystem.Client.5y4989ktrx.pdb": "HospitalAppointmentSystem.Client.pdb"
+      "HospitalAppointmentSystem.Client.yq9ofniikp.wasm": "HospitalAppointmentSystem.Client.wasm",
+      "HospitalAppointmentSystem.Client.nxia26xgbx.pdb": "HospitalAppointmentSystem.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.8o8n7iomrf.js": "sha256-WIUiy49hHQ3kOAtRdCtUzm3Yg5BnOqCC+Q+kri9Fi1g="
@@ -247,20 +246,19 @@
       "Microsoft.Extensions.Configuration.Json.nn2igycfnm.wasm": "sha256-8zV6O3S5B1hZ6xVX4xp8lNUNbVaohLbcqBjDxBd3O6k=",
       "Microsoft.Extensions.DependencyInjection.0t6hu68uix.wasm": "sha256-tPIWCSOvTVdqpEED9kSlHL+7wtRqNFHRl0OgXnITR/c=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.mxyhp8w354.wasm": "sha256-5psbCtEVKqy16X45ZY5CDh+DZvycL94VIqWkExLrMgY=",
+      "Microsoft.Extensions.Diagnostics.3dggcz3f5g.wasm": "sha256-156LhXAYvHMyt3ZzK9IAfqAlTFyB7YXVJ/QGM31hggs=",
+      "Microsoft.Extensions.Diagnostics.Abstractions.krp2q25ggl.wasm": "sha256-8OA0nUv53l8IFeCTYWz0u2o5/PGbV4JeB8oSn+q16tI=",
       "Microsoft.Extensions.FileProviders.Abstractions.t0xgg5v1wp.wasm": "sha256-LX/A4/0dJqhmZooWc4gAsgqdZoChS3dImRDhy4EzMJc=",
       "Microsoft.Extensions.FileProviders.Physical.k8mchckl5y.wasm": "sha256-bCNOVe1lu3Pfl8yWs7/vtvTUbutHuz3FPoZhywRMKf0=",
       "Microsoft.Extensions.FileSystemGlobbing.whx15sk3zg.wasm": "sha256-1HS2K1bnayg4jZtI6SAENoF9aQG4K8r0QepAjDUOEhw=",
+      "Microsoft.Extensions.Http.nac254jq09.wasm": "sha256-vw+BtWX7li0ZyL0mpz9BapSo6oVbTU3WhQ7XUvXempU=",
       "Microsoft.Extensions.Logging.r19g4upt09.wasm": "sha256-zx272gZhoP57IxT5PBZJp98grvEYBZlD24Sq1zmuCaI=",
       "Microsoft.Extensions.Logging.Abstractions.576c9qdvb8.wasm": "sha256-n3TzNWQDQffebqWA6IVoTj3KySEFWLBfY/50UzbUUkI=",
       "Microsoft.Extensions.Options.7s85c9su09.wasm": "sha256-t0tcEF+PFWoyx+GUMwO9+xYR1OVsaDC8xhD21xsV+q4=",
+      "Microsoft.Extensions.Options.ConfigurationExtensions.25907k314f.wasm": "sha256-RtVzoDULKaRIx4ZUMwAiCoPKWTGLHuEZzczPlfPFzlc=",
       "Microsoft.Extensions.Primitives.cp6sp8t3ma.wasm": "sha256-EIY4Z4G1qkud25LC92NWskOlcgujBPIf3TPD04EepqI=",
-      "Microsoft.IdentityModel.Abstractions.tb2vayak7k.wasm": "sha256-dzAF4O1s+SHUAkU1sL9gS/wmoxmhxfg6vOMDgr7nXk0=",
-      "Microsoft.IdentityModel.JsonWebTokens.gczu46jt0r.wasm": "sha256-kCVMQjliUED1u2ZtccyPWWGBNgRGwtt5KQwEKl8nsWw=",
-      "Microsoft.IdentityModel.Logging.oji6jat07v.wasm": "sha256-nDEScktQo675+e43ZbQTuhxcj9D1HvJuEiaAU62OGWo=",
-      "Microsoft.IdentityModel.Tokens.y7rnt1lnvp.wasm": "sha256-jtrpNhLo4tccS95qk2VPdiZyBEDUzF2u1CYqilKqALE=",
       "Microsoft.JSInterop.fzaop883yy.wasm": "sha256-ZZk7Nd3gJjOCwZi+mmnNYqzpljZB9AWTOmvs5hZ13xs=",
       "Microsoft.JSInterop.WebAssembly.v1y0duelx8.wasm": "sha256-YzFMSFoe8Jc9F+zF0yOmWfNpA6JhS/IO6JxcaVuHWIk=",
-      "System.IdentityModel.Tokens.Jwt.77v3p6q117.wasm": "sha256-Tc4JTI5qSj3ULaD2ZBjIHyYeNA9bs359zMmlVYfTbUk=",
       "Microsoft.CSharp.0krj4ve566.wasm": "sha256-QJKG5agfskYhNg4CWMzF8EqwsNALoPtT7h5pO9k6aHk=",
       "Microsoft.VisualBasic.Core.bcw8auwqwc.wasm": "sha256-Raj1ha4M/EXL7zvyW9Evn28B9GxWHE0gaLR/NXPSrdk=",
       "Microsoft.VisualBasic.ezua2clavb.wasm": "sha256-Wn1A97sEio88/HfvTRdDM1pgRek6RfaNgVkwzSIvIAw=",
@@ -429,11 +427,11 @@
       "mscorlib.l6md3pggqy.wasm": "sha256-jZgH0LixLeQKqaq33akQgDGhfE7vbXbHtvCId5HC0Yo=",
       "netstandard.lij9csiyuf.wasm": "sha256-DeeBl9s8G34N3IfYRQ+MoY807amodj8cvpuvUSNaWE4=",
       "HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm": "sha256-CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc=",
-      "HospitalAppointmentSystem.Client.xzvnnhme6z.wasm": "sha256-Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw="
+      "HospitalAppointmentSystem.Client.yq9ofniikp.wasm": "sha256-pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU="
     },
     "pdb": {
       "HospitalAppointmentSystem.Shared.d31k0zddk3.pdb": "sha256-d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY=",
-      "HospitalAppointmentSystem.Client.5y4989ktrx.pdb": "sha256-Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko="
+      "HospitalAppointmentSystem.Client.nxia26xgbx.pdb": "sha256-pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw="
     }
   },
   "cacheBootResources": true,

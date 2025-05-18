@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5LSIZ1FeM1U=",
+  "dgSpecHash": "x766OGM1PpM=",
   "success": true,
-  "projectFilePath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-5/src/HospitalAppointmentSystem.Core/HospitalAppointmentSystem.Core.csproj",
+  "projectFilePath": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Core/HospitalAppointmentSystem.Core.csproj",
   "expectedPackageFiles": [
     "/Users/dmytromalisevych/.nuget/packages/fluentvalidation/11.9.0/fluentvalidation.11.9.0.nupkg.sha512",
     "/Users/dmytromalisevych/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
