@@ -1,0 +1,60 @@
+@page "/appointments/create"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using HospitalAppointmentSystem.Client.Models
+@using HospitalAppointmentSystem.Client.Services
+@attribute [Authorize]
+@inject AppointmentService AppointmentService
+@inject NavigationManager NavigationManager
+
+<h3>Створення нового запису</h3>
+
+<EditForm Model="@_appointment" OnValidSubmit="@HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label>Дата:</label>
+        <InputDate @bind-Value="_appointment.Date" class="form-control" />
+        <ValidationMessage For="@(() => _appointment.Date)" />
+    </div>
+
+    <div class="form-group">
+        <label>Пацієнт:</label>
+        <InputText @bind-Value="_appointment.PatientName" class="form-control" />
+        <ValidationMessage For="@(() => _appointment.PatientName)" />
+    </div>
+
+    <div class="form-group">
+        <label>Лікар:</label>
+        <InputText @bind-Value="_appointment.DoctorName" class="form-control" />
+        <ValidationMessage For="@(() => _appointment.DoctorName)" />
+    </div>
+
+    <div class="form-group">
+        <label>Опис:</label>
+        <InputTextArea @bind-Value="_appointment.Description" class="form-control" />
+        <ValidationMessage For="@(() => _appointment.Description)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Створити</button>
+    <a href="/appointments" class="btn btn-secondary">Скасувати</a>
+</EditForm>
+
+@code {
+    private Appointment _appointment = new() { Date = DateTime.Now };
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            await AppointmentService.CreateAppointment(_appointment);
+            NavigationManager.NavigateTo("/appointments");
+        }
+        catch (Exception ex)
+        {
+            // Можна додати обробку помилок, наприклад:
+            // await JSRuntime.InvokeVoidAsync("alert", $"Помилка: {ex.Message}");
+        }
+    }
+}

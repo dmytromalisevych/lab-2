@@ -1,0 +1,74 @@
+@page "/appointments"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components
+@using Microsoft.JSInterop
+@using HospitalAppointmentSystem.Client.Models
+@using HospitalAppointmentSystem.Client.Services
+@attribute [Authorize]
+@inject AppointmentService AppointmentService
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+
+<h3>Записи на прийом</h3>
+
+<div class="mb-3">
+    <a href="/appointments/create" class="btn btn-primary">Створити новий запис</a>
+</div>
+
+@if (_appointments == null)
+{
+    <p>Завантаження...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Пацієнт</th>
+                <th>Лікар</th>
+                <th>Статус</th>
+                <th>Дії</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appointment in _appointments)
+            {
+                <tr>
+                    <td>@appointment.Date.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@appointment.PatientName</td>
+                    <td>@appointment.DoctorName</td>
+                    <td>@appointment.Status</td>
+                    <td>
+                        <a href="@($"/appointments/{appointment.Id}")" class="btn btn-info btn-sm">Деталі</a>
+                        <a href="@($"/appointments/edit/{appointment.Id}")" class="btn btn-warning btn-sm">Редагувати</a>
+                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteAppointment(appointment.Id)">Видалити</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Appointment>? _appointments;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAppointments();
+    }
+
+    private async Task LoadAppointments()
+    {
+        _appointments = await AppointmentService.GetAppointments();
+    }
+
+    private async Task DeleteAppointment(int id)
+    {
+        if (await JS.InvokeAsync<bool>("confirm", "Ви впевнені, що хочете видалити цей запис?"))
+        {
+            await AppointmentService.DeleteAppointment(id);
+            await LoadAppointments();
+        }
+    }
+}

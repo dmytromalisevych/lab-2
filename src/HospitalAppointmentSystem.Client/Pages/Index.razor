@@ -1,0 +1,49 @@
+@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
+
+<PageTitle>Головна - Система запису до лікаря</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <h1>Вітаємо, @context.User.Identity?.Name!</h1>
+        <p>Ви успішно увійшли в систему запису до лікаря.</p>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Швидкі дії</h5>
+                        <div class="list-group">
+                            <a href="/appointments/create" class="list-group-item list-group-item-action">
+                                <i class="oi oi-plus"></i> Створити новий запис
+                            </a>
+                            <a href="/appointments" class="list-group-item list-group-item-action">
+                                <i class="oi oi-list"></i> Переглянути всі записи
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <h1>Ласкаво просимо до системи запису до лікаря</h1>
+        <p>Для продовження роботи, будь ласка, <a href="/login">увійдіть</a> або <a href="/register">зареєструйтеся</a>.</p>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Переваги системи</h5>
+                        <ul>
+                            <li>Зручний запис на прийом</li>
+                            <li>Управління своїми записами</li>
+                            <li>Перегляд історії відвідувань</li>
+                            <li>Сповіщення про майбутні прийоми</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </NotAuthorized>
+</AuthorizeView>

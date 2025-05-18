@@ -1,0 +1,70 @@
+@page "/appointments/{Id:int}"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components
+@using Microsoft.JSInterop
+@using HospitalAppointmentSystem.Client.Models
+@using HospitalAppointmentSystem.Client.Services
+@attribute [Authorize]
+@inject AppointmentService AppointmentService
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JS
+
+<h3>Деталі запису</h3>
+
+@if (_appointment == null)
+{
+    <p>Завантаження...</p>
+}
+else
+{
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Запис №@_appointment.Id</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Дата:</strong> @_appointment.Date.ToString("dd.MM.yyyy HH:mm")</p>
+                    <p><strong>Пацієнт:</strong> @_appointment.PatientName</p>
+                    <p><strong>Лікар:</strong> @_appointment.DoctorName</p>
+                    <p><strong>Статус:</strong> @_appointment.Status</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Опис:</strong></p>
+                    <p>@_appointment.Description</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="@($"/appointments/edit/{Id}")" class="btn btn-warning">Редагувати</a>
+            <a href="/appointments" class="btn btn-secondary">Назад до списку</a>
+            <button class="btn btn-danger" @onclick="DeleteAppointment">Видалити</button>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Appointment? _appointment;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _appointment = await AppointmentService.GetAppointment(Id);
+        }
+        catch (Exception)
+        {
+            NavigationManager.NavigateTo("/appointments");
+        }
+    }
+
+    private async Task DeleteAppointment()
+    {
+        if (await JS.InvokeAsync<bool>("confirm", "Ви впевнені, що хочете видалити цей запис?"))
+        {
+            await AppointmentService.DeleteAppointment(Id);
+            NavigationManager.NavigateTo("/appointments");
+        }
+    }
+}

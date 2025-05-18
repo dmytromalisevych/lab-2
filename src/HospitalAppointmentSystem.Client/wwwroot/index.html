@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Система запису до лікаря</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="HospitalAppointmentSystem.Client.styles.css" rel="stylesheet" />
+</head>
+<body>
+<div id="app">
+    <div style="position:absolute; top:30vh; width:100%; text-align:center">
+        <h1>Система запису до лікаря</h1>
+        <div style="display:flex; gap:10px; justify-content:center; align-items:center">
+            <div class="spinner-border" role="status"></div>
+            <span id="loading-status">Завантаження...</span>
+        </div>
+    </div>
+</div>
+
+<div id="blazor-error-ui">
+    Виникла неопрацьована помилка.
+    <a href="" class="reload">Перезавантажити</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+<script>
+    window.addEventListener('load', function() {
+        var loadingStatus = document.getElementById('loading-status');
+
+        // Перевірка наявності WebAssembly
+        if (!window.WebAssembly) {
+            loadingStatus.textContent = 'Помилка: WebAssembly не підтримується';
+            return;
+        }
+
+        // Відстеження завантаження Blazor
+        if (window._blazorInitialized) {
+            loadingStatus.textContent = 'Помилка: Blazor вже ініціалізований';
+            return;
+        }
+
+        window._blazorInitialized = true;
+
+        // Додаємо обробник помилок
+        window.onerror = function(msg, url, line, col, error) {
+            loadingStatus.textContent = `Помилка: ${msg}`;
+            console.error('Error details:', {msg, url, line, col, error});
+            return false;
+        };
+    });
+</script>
+
+<script src="_framework/blazor.webassembly.js"></script>
+</body>
+</html>

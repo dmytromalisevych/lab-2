@@ -5,10 +5,8 @@ using HospitalAppointmentSystem.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
 builder.Services.AddControllersWithViews();
 
-// Add session services
 builder.Services.AddSingleton<FileSessionStorage>();
 builder.Services.AddSession(options =>
 {
@@ -17,32 +15,25 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-// Configure the existing AppDbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configure the Identity DbContext
 builder.Services.AddDbContext<AppIdentityDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("IdentityConnection")));
 
-// Configure Identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => 
 {
-    // Password settings
     options.Password.RequiredLength = 8;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireLowercase = true;
     options.Password.RequireUppercase = true;
     options.Password.RequireDigit = true;
-
-    // User settings
+    
     options.User.RequireUniqueEmail = true;
-
-    // SignIn settings
+    
     options.SignIn.RequireConfirmedAccount = false;
     options.SignIn.RequireConfirmedEmail = false;
-
-    // Lockout settings
+    
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
     options.Lockout.MaxFailedAccessAttempts = 5;
     options.Lockout.AllowedForNewUsers = true;
@@ -50,7 +41,6 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 .AddEntityFrameworkStores<AppIdentityDbContext>()
 .AddDefaultTokenProviders();
 
-// Configure Cookie settings
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Account/Login";
@@ -63,7 +53,6 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
