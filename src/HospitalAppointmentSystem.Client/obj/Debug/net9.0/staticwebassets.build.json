@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BdAPDZgJfc6J+L12VT2zw3Yv9xMNzAlZ8zjZswZwLFk=",
+  "Hash": "nc4tiXcxCVg6KYnHzDe26dE4lcvEq4yB81ZcywAQFRc=",
   "Source": "HospitalAppointmentSystem.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "k1l11hr2jl",
-      "Integrity": "OCqG6gykae7W4/8BSMrt15bxVO4R7Zk5xPQdjLjPshA=",
+      "Fingerprint": "50cudfxl8k",
+      "Integrity": "RbE2BYvIDZNTVXnqsHlUhJ0NZkyY+8eDH7fmh02LG5Q=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj/Debug/net9.0/blazor.boot.json"
@@ -220,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "h9kd0gljdb",
-      "Integrity": "KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU=",
+      "Fingerprint": "5y4989ktrx",
+      "Integrity": "Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj/Debug/net9.0/HospitalAppointmentSystem.Client.pdb"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "9z58se4a8c",
-      "Integrity": "RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o=",
+      "Fingerprint": "xzvnnhme6z",
+      "Integrity": "Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/webcil/HospitalAppointmentSystem.Client.wasm"
@@ -4637,12 +4637,12 @@
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/System.Globalization.Calendars.wasm"
     },
     {
-      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-5qm22k7s2o.gz",
+      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-fmo52pklvk.gz",
       "SourceId": "HospitalAppointmentSystem.Client",
       "SourceType": "Computed",
       "ContentRoot": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/",
       "BasePath": "/",
-      "RelativePath": "HospitalAppointmentSystem.Client#[.{fingerprint=5qm22k7s2o}]?.styles.css.gz",
+      "RelativePath": "HospitalAppointmentSystem.Client#[.{fingerprint=fmo52pklvk}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -4651,8 +4651,8 @@
       "RelatedAsset": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/bundle/HospitalAppointmentSystem.Client.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "uu8m0s4cps",
-      "Integrity": "VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=",
+      "Fingerprint": "f1egayrkcv",
+      "Integrity": "7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/bundle/HospitalAppointmentSystem.Client.styles.css"
@@ -4742,12 +4742,12 @@
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/System.IO.UnmanagedMemoryStream.wasm"
     },
     {
-      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-5qm22k7s2o.gz",
+      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-fmo52pklvk.gz",
       "SourceId": "HospitalAppointmentSystem.Client",
       "SourceType": "Computed",
       "ContentRoot": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/",
       "BasePath": "/",
-      "RelativePath": "HospitalAppointmentSystem.Client#[.{fingerprint=5qm22k7s2o}]!.bundle.scp.css.gz",
+      "RelativePath": "HospitalAppointmentSystem.Client#[.{fingerprint=fmo52pklvk}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -4756,8 +4756,8 @@
       "RelatedAsset": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/projectbundle/HospitalAppointmentSystem.Client.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "uu8m0s4cps",
-      "Integrity": "VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=",
+      "Fingerprint": "f1egayrkcv",
+      "Integrity": "7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/projectbundle/HospitalAppointmentSystem.Client.bundle.scp.css"
@@ -5162,12 +5162,12 @@
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/System.Security.Principal.Windows.wasm"
     },
     {
-      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-9z58se4a8c.gz",
+      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-xzvnnhme6z.gz",
       "SourceId": "HospitalAppointmentSystem.Client",
       "SourceType": "Computed",
       "ContentRoot": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/",
       "BasePath": "/",
-      "RelativePath": "_framework/HospitalAppointmentSystem.Client#[.{fingerprint=9z58se4a8c}]!.wasm.gz",
+      "RelativePath": "_framework/HospitalAppointmentSystem.Client#[.{fingerprint=xzvnnhme6z}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -5176,8 +5176,8 @@
       "RelatedAsset": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/HospitalAppointmentSystem.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "lvm8gzrhs5",
-      "Integrity": "L26CbW4hqSybpEtJyZ3hyYLktSL0AAF8+z0NpI/SS4Y=",
+      "Fingerprint": "2oer8xsxcu",
+      "Integrity": "Aq8v5pDe77829gSxIhUlwFvIPXWNWKlrewsZjlwPHEc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/HospitalAppointmentSystem.Client.wasm"
@@ -7346,7 +7346,7 @@
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/System.Security.Cryptography.Encoding.wasm"
     },
     {
-      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/iur26bjwio-k1l11hr2jl.gz",
+      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/iur26bjwio-50cudfxl8k.gz",
       "SourceId": "HospitalAppointmentSystem.Client",
       "SourceType": "Computed",
       "ContentRoot": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/",
@@ -7360,8 +7360,8 @@
       "RelatedAsset": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "mbahbno07z",
-      "Integrity": "gnV3RsYoCScjcIUpcEix+9o2sz49LCdpEd9iYXLon+4=",
+      "Fingerprint": "ykhrd00ati",
+      "Integrity": "wj6k5wXfWPQU0rLET+fzNpxDz1Vwi+F8Cif8oKQ+HZA=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/blazor.boot.json"
@@ -8228,12 +8228,12 @@
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Forms.wasm"
     },
     {
-      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-bljuqxispd.gz",
+      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-mrtqunugj9.gz",
       "SourceId": "HospitalAppointmentSystem.Client",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/",
       "BasePath": "/",
-      "RelativePath": "index#[.{fingerprint=bljuqxispd}]?.html.gz",
+      "RelativePath": "index#[.{fingerprint=mrtqunugj9}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -8242,8 +8242,8 @@
       "RelatedAsset": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/wwwroot/index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "qncyosvr1v",
-      "Integrity": "atOlIzDusi/AZbeV8jVjHBKUAOtk9HlI0ddGey4KkmM=",
+      "Fingerprint": "6y01pkl1to",
+      "Integrity": "DtSt+3qBZ5Us57vmofnUggopbbS4bXAkHHQ3SPu7TR4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/wwwroot/index.html"
@@ -9152,12 +9152,12 @@
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/Microsoft.AspNetCore.Components.Web.wasm"
     },
     {
-      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-h9kd0gljdb.gz",
+      "Identity": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-5y4989ktrx.gz",
       "SourceId": "HospitalAppointmentSystem.Client",
       "SourceType": "Computed",
       "ContentRoot": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/",
       "BasePath": "/",
-      "RelativePath": "_framework/HospitalAppointmentSystem.Client#[.{fingerprint=h9kd0gljdb}]!.pdb.gz",
+      "RelativePath": "_framework/HospitalAppointmentSystem.Client#[.{fingerprint=5y4989ktrx}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -9166,8 +9166,8 @@
       "RelatedAsset": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/HospitalAppointmentSystem.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "5789zslzo0",
-      "Integrity": "wZS4TWSW4cMyrAhMs62Lswlxs1bUpJVNShZ1N+szugE=",
+      "Fingerprint": "vpvpu2nes5",
+      "Integrity": "04J6f5S7gekfWm2X7+A6R9/dWWkMJn0PAQYPKS0LUV4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/HospitalAppointmentSystem.Client.pdb"
@@ -10069,8 +10069,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "5qm22k7s2o",
-      "Integrity": "c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=",
+      "Fingerprint": "fmo52pklvk",
+      "Integrity": "59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/bundle/HospitalAppointmentSystem.Client.styles.css"
@@ -10090,8 +10090,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "5qm22k7s2o",
-      "Integrity": "c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=",
+      "Fingerprint": "fmo52pklvk",
+      "Integrity": "59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/projectbundle/HospitalAppointmentSystem.Client.bundle.scp.css"
@@ -10195,8 +10195,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bljuqxispd",
-      "Integrity": "r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc=",
+      "Fingerprint": "mrtqunugj9",
+      "Integrity": "zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
@@ -11304,11 +11304,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OCqG6gykae7W4/8BSMrt15bxVO4R7Zk5xPQdjLjPshA=\""
+          "Value": "\"RbE2BYvIDZNTVXnqsHlUhJ0NZkyY+8eDH7fmh02LG5Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:49:21 GMT"
+          "Value": "Sun, 18 May 2025 17:35:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11318,18 +11318,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OCqG6gykae7W4/8BSMrt15bxVO4R7Zk5xPQdjLjPshA="
+          "Value": "sha256-RbE2BYvIDZNTVXnqsHlUhJ0NZkyY+8eDH7fmh02LG5Q="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/iur26bjwio-k1l11hr2jl.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/iur26bjwio-50cudfxl8k.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000077645780"
+          "Quality": "0.000077639752"
         }
       ],
       "ResponseHeaders": [
@@ -11339,15 +11339,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12878"
+          "Value": "12879"
         },
         {
           "Name": "ETag",
-          "Value": "\"gnV3RsYoCScjcIUpcEix+9o2sz49LCdpEd9iYXLon+4=\""
+          "Value": "\"wj6k5wXfWPQU0rLET+fzNpxDz1Vwi+F8Cif8oKQ+HZA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
+          "Value": "Sun, 18 May 2025 17:31:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11367,19 +11367,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"OCqG6gykae7W4/8BSMrt15bxVO4R7Zk5xPQdjLjPshA=\""
+          "Value": "W/\"RbE2BYvIDZNTVXnqsHlUhJ0NZkyY+8eDH7fmh02LG5Q=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OCqG6gykae7W4/8BSMrt15bxVO4R7Zk5xPQdjLjPshA="
+          "Value": "sha256-RbE2BYvIDZNTVXnqsHlUhJ0NZkyY+8eDH7fmh02LG5Q="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/iur26bjwio-k1l11hr2jl.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/iur26bjwio-50cudfxl8k.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11388,7 +11388,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12878"
+          "Value": "12879"
         },
         {
           "Name": "Content-Type",
@@ -11396,11 +11396,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gnV3RsYoCScjcIUpcEix+9o2sz49LCdpEd9iYXLon+4=\""
+          "Value": "\"wj6k5wXfWPQU0rLET+fzNpxDz1Vwi+F8Cif8oKQ+HZA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
+          "Value": "Sun, 18 May 2025 17:31:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11418,7 +11418,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gnV3RsYoCScjcIUpcEix+9o2sz49LCdpEd9iYXLon+4="
+          "Value": "sha256-wj6k5wXfWPQU0rLET+fzNpxDz1Vwi+F8Cif8oKQ+HZA="
         }
       ]
     },
@@ -13348,168 +13348,7 @@
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Client.9z58se4a8c.wasm",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/HospitalAppointmentSystem.Client.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "68373"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9z58se4a8c"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Client.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/HospitalAppointmentSystem.Client.9z58se4a8c.wasm",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-9z58se4a8c.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000040594301"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "24633"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"L26CbW4hqSybpEtJyZ3hyYLktSL0AAF8+z0NpI/SS4Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9z58se4a8c"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Client.wasm"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/HospitalAppointmentSystem.Client.9z58se4a8c.wasm.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-9z58se4a8c.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "24633"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"L26CbW4hqSybpEtJyZ3hyYLktSL0AAF8+z0NpI/SS4Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9z58se4a8c"
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Client.wasm.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-L26CbW4hqSybpEtJyZ3hyYLktSL0AAF8+z0NpI/SS4Y="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/HospitalAppointmentSystem.Client.h9kd0gljdb.pdb",
+      "Route": "_framework/HospitalAppointmentSystem.Client.5y4989ktrx.pdb",
       "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/HospitalAppointmentSystem.Client.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -13519,7 +13358,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "48752"
+          "Value": "52756"
         },
         {
           "Name": "Content-Type",
@@ -13527,11 +13366,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU=\""
+          "Value": "\"Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:35 GMT"
+          "Value": "Sun, 18 May 2025 17:31:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13541,7 +13380,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h9kd0gljdb"
+          "Value": "5y4989ktrx"
         },
         {
           "Name": "label",
@@ -13549,18 +13388,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU="
+          "Value": "sha256-Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko="
         }
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Client.h9kd0gljdb.pdb",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-h9kd0gljdb.gz",
+      "Route": "_framework/HospitalAppointmentSystem.Client.5y4989ktrx.pdb",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-5y4989ktrx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000026870885"
+          "Quality": "0.000025257628"
         }
       ],
       "ResponseHeaders": [
@@ -13570,15 +13409,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37214"
+          "Value": "39591"
         },
         {
           "Name": "ETag",
-          "Value": "\"wZS4TWSW4cMyrAhMs62Lswlxs1bUpJVNShZ1N+szugE=\""
+          "Value": "\"04J6f5S7gekfWm2X7+A6R9/dWWkMJn0PAQYPKS0LUV4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
+          "Value": "Sun, 18 May 2025 17:31:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13598,13 +13437,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU=\""
+          "Value": "W/\"Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h9kd0gljdb"
+          "Value": "5y4989ktrx"
         },
         {
           "Name": "label",
@@ -13612,13 +13451,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU="
+          "Value": "sha256-Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko="
         }
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Client.h9kd0gljdb.pdb.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-h9kd0gljdb.gz",
+      "Route": "_framework/HospitalAppointmentSystem.Client.5y4989ktrx.pdb.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-5y4989ktrx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13627,7 +13466,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37214"
+          "Value": "39591"
         },
         {
           "Name": "Content-Type",
@@ -13635,11 +13474,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wZS4TWSW4cMyrAhMs62Lswlxs1bUpJVNShZ1N+szugE=\""
+          "Value": "\"04J6f5S7gekfWm2X7+A6R9/dWWkMJn0PAQYPKS0LUV4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
+          "Value": "Sun, 18 May 2025 17:31:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13657,7 +13496,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "h9kd0gljdb"
+          "Value": "5y4989ktrx"
         },
         {
           "Name": "label",
@@ -13665,7 +13504,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wZS4TWSW4cMyrAhMs62Lswlxs1bUpJVNShZ1N+szugE="
+          "Value": "sha256-04J6f5S7gekfWm2X7+A6R9/dWWkMJn0PAQYPKS0LUV4="
         }
       ]
     },
@@ -13680,7 +13519,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "48752"
+          "Value": "52756"
         },
         {
           "Name": "Content-Type",
@@ -13688,11 +13527,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU=\""
+          "Value": "\"Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:35 GMT"
+          "Value": "Sun, 18 May 2025 17:31:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13702,18 +13541,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU="
+          "Value": "sha256-Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.pdb",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-h9kd0gljdb.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-5y4989ktrx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000026870885"
+          "Quality": "0.000025257628"
         }
       ],
       "ResponseHeaders": [
@@ -13723,15 +13562,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37214"
+          "Value": "39591"
         },
         {
           "Name": "ETag",
-          "Value": "\"wZS4TWSW4cMyrAhMs62Lswlxs1bUpJVNShZ1N+szugE=\""
+          "Value": "\"04J6f5S7gekfWm2X7+A6R9/dWWkMJn0PAQYPKS0LUV4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
+          "Value": "Sun, 18 May 2025 17:31:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13751,19 +13590,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU=\""
+          "Value": "W/\"Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU="
+          "Value": "sha256-Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.pdb.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-h9kd0gljdb.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/tukw0ky3hd-5y4989ktrx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13772,7 +13611,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37214"
+          "Value": "39591"
         },
         {
           "Name": "Content-Type",
@@ -13780,11 +13619,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wZS4TWSW4cMyrAhMs62Lswlxs1bUpJVNShZ1N+szugE=\""
+          "Value": "\"04J6f5S7gekfWm2X7+A6R9/dWWkMJn0PAQYPKS0LUV4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
+          "Value": "Sun, 18 May 2025 17:31:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13802,7 +13641,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wZS4TWSW4cMyrAhMs62Lswlxs1bUpJVNShZ1N+szugE="
+          "Value": "sha256-04J6f5S7gekfWm2X7+A6R9/dWWkMJn0PAQYPKS0LUV4="
         }
       ]
     },
@@ -13817,7 +13656,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "68373"
+          "Value": "78101"
         },
         {
           "Name": "Content-Type",
@@ -13825,11 +13664,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o=\""
+          "Value": "\"Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:35 GMT"
+          "Value": "Sun, 18 May 2025 17:31:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13839,18 +13678,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o="
+          "Value": "sha256-Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.wasm",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-9z58se4a8c.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-xzvnnhme6z.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000040594301"
+          "Quality": "0.000035826884"
         }
       ],
       "ResponseHeaders": [
@@ -13860,15 +13699,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "24633"
+          "Value": "27911"
         },
         {
           "Name": "ETag",
-          "Value": "\"L26CbW4hqSybpEtJyZ3hyYLktSL0AAF8+z0NpI/SS4Y=\""
+          "Value": "\"Aq8v5pDe77829gSxIhUlwFvIPXWNWKlrewsZjlwPHEc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
+          "Value": "Sun, 18 May 2025 17:31:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13888,19 +13727,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o=\""
+          "Value": "W/\"Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o="
+          "Value": "sha256-Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.wasm.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-9z58se4a8c.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-xzvnnhme6z.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13909,7 +13748,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "24633"
+          "Value": "27911"
         },
         {
           "Name": "Content-Type",
@@ -13917,11 +13756,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"L26CbW4hqSybpEtJyZ3hyYLktSL0AAF8+z0NpI/SS4Y=\""
+          "Value": "\"Aq8v5pDe77829gSxIhUlwFvIPXWNWKlrewsZjlwPHEc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:36 GMT"
+          "Value": "Sun, 18 May 2025 17:31:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13939,7 +13778,168 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-L26CbW4hqSybpEtJyZ3hyYLktSL0AAF8+z0NpI/SS4Y="
+          "Value": "sha256-Aq8v5pDe77829gSxIhUlwFvIPXWNWKlrewsZjlwPHEc="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Client.xzvnnhme6z.wasm",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/bin/Debug/net9.0/wwwroot/_framework/HospitalAppointmentSystem.Client.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "78101"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:31:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xzvnnhme6z"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/HospitalAppointmentSystem.Client.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Client.xzvnnhme6z.wasm",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-xzvnnhme6z.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000035826884"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27911"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Aq8v5pDe77829gSxIhUlwFvIPXWNWKlrewsZjlwPHEc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:31:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xzvnnhme6z"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/HospitalAppointmentSystem.Client.wasm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Client.xzvnnhme6z.wasm.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/4kcf3sxw33-xzvnnhme6z.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27911"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Aq8v5pDe77829gSxIhUlwFvIPXWNWKlrewsZjlwPHEc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:31:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xzvnnhme6z"
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/HospitalAppointmentSystem.Client.wasm.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Aq8v5pDe77829gSxIhUlwFvIPXWNWKlrewsZjlwPHEc="
         }
       ]
     },
@@ -75116,13 +75116,13 @@
       ]
     },
     {
-      "Route": "HospitalAppointmentSystem.Client.5qm22k7s2o.bundle.scp.css",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-5qm22k7s2o.gz",
+      "Route": "HospitalAppointmentSystem.Client.bundle.scp.css",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-fmo52pklvk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000718907261"
+          "Quality": "0.000717360115"
         }
       ],
       "ResponseHeaders": [
@@ -75132,19 +75132,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1390"
+          "Value": "1393"
         },
         {
           "Name": "ETag",
-          "Value": "\"VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=\""
+          "Value": "\"7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -75160,26 +75160,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=\""
+          "Value": "W/\"59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "5qm22k7s2o"
-        },
-        {
-          "Name": "label",
-          "Value": "HospitalAppointmentSystem.Client.bundle.scp.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8="
+          "Value": "sha256-59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k="
         }
       ]
     },
     {
-      "Route": "HospitalAppointmentSystem.Client.5qm22k7s2o.bundle.scp.css",
+      "Route": "HospitalAppointmentSystem.Client.bundle.scp.css",
       "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/projectbundle/HospitalAppointmentSystem.Client.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -75189,7 +75181,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4491"
+          "Value": "4484"
         },
         {
           "Name": "Content-Type",
@@ -75197,11 +75189,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=\""
+          "Value": "\"59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k="
+        }
+      ]
+    },
+    {
+      "Route": "HospitalAppointmentSystem.Client.bundle.scp.css.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-fmo52pklvk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1393"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8="
+        }
+      ]
+    },
+    {
+      "Route": "HospitalAppointmentSystem.Client.fmo52pklvk.bundle.scp.css",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-fmo52pklvk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000717360115"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1393"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fmo52pklvk"
+        },
+        {
+          "Name": "label",
+          "Value": "HospitalAppointmentSystem.Client.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k="
+        }
+      ]
+    },
+    {
+      "Route": "HospitalAppointmentSystem.Client.fmo52pklvk.bundle.scp.css",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/projectbundle/HospitalAppointmentSystem.Client.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75211,7 +75348,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5qm22k7s2o"
+          "Value": "fmo52pklvk"
         },
         {
           "Name": "label",
@@ -75219,13 +75356,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8="
+          "Value": "sha256-59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k="
         }
       ]
     },
     {
-      "Route": "HospitalAppointmentSystem.Client.5qm22k7s2o.bundle.scp.css.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-5qm22k7s2o.gz",
+      "Route": "HospitalAppointmentSystem.Client.fmo52pklvk.bundle.scp.css.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-fmo52pklvk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -75234,7 +75371,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1390"
+          "Value": "1393"
         },
         {
           "Name": "Content-Type",
@@ -75242,11 +75379,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=\""
+          "Value": "\"7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75264,7 +75401,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5qm22k7s2o"
+          "Value": "fmo52pklvk"
         },
         {
           "Name": "label",
@@ -75272,18 +75409,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE="
+          "Value": "sha256-7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8="
         }
       ]
     },
     {
-      "Route": "HospitalAppointmentSystem.Client.5qm22k7s2o.styles.css",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-5qm22k7s2o.gz",
+      "Route": "HospitalAppointmentSystem.Client.fmo52pklvk.styles.css",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-fmo52pklvk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000718907261"
+          "Quality": "0.000717360115"
         }
       ],
       "ResponseHeaders": [
@@ -75293,15 +75430,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1390"
+          "Value": "1393"
         },
         {
           "Name": "ETag",
-          "Value": "\"VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=\""
+          "Value": "\"7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75321,13 +75458,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=\""
+          "Value": "W/\"59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5qm22k7s2o"
+          "Value": "fmo52pklvk"
         },
         {
           "Name": "label",
@@ -75335,12 +75472,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8="
+          "Value": "sha256-59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k="
         }
       ]
     },
     {
-      "Route": "HospitalAppointmentSystem.Client.5qm22k7s2o.styles.css",
+      "Route": "HospitalAppointmentSystem.Client.fmo52pklvk.styles.css",
       "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/bundle/HospitalAppointmentSystem.Client.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -75350,7 +75487,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4491"
+          "Value": "4484"
         },
         {
           "Name": "Content-Type",
@@ -75358,11 +75495,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=\""
+          "Value": "\"59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75372,7 +75509,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5qm22k7s2o"
+          "Value": "fmo52pklvk"
         },
         {
           "Name": "label",
@@ -75380,13 +75517,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8="
+          "Value": "sha256-59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k="
         }
       ]
     },
     {
-      "Route": "HospitalAppointmentSystem.Client.5qm22k7s2o.styles.css.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-5qm22k7s2o.gz",
+      "Route": "HospitalAppointmentSystem.Client.fmo52pklvk.styles.css.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-fmo52pklvk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -75395,7 +75532,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1390"
+          "Value": "1393"
         },
         {
           "Name": "Content-Type",
@@ -75403,11 +75540,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=\""
+          "Value": "\"7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75425,7 +75562,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "5qm22k7s2o"
+          "Value": "fmo52pklvk"
         },
         {
           "Name": "label",
@@ -75433,155 +75570,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE="
-        }
-      ]
-    },
-    {
-      "Route": "HospitalAppointmentSystem.Client.bundle.scp.css",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-5qm22k7s2o.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000718907261"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1390"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8="
-        }
-      ]
-    },
-    {
-      "Route": "HospitalAppointmentSystem.Client.bundle.scp.css",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/scopedcss/projectbundle/HospitalAppointmentSystem.Client.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4491"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8="
-        }
-      ]
-    },
-    {
-      "Route": "HospitalAppointmentSystem.Client.bundle.scp.css.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/2b5xl66ade-5qm22k7s2o.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1390"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE="
+          "Value": "sha256-7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8="
         }
       ]
     },
     {
       "Route": "HospitalAppointmentSystem.Client.styles.css",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-5qm22k7s2o.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-fmo52pklvk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000718907261"
+          "Quality": "0.000717360115"
         }
       ],
       "ResponseHeaders": [
@@ -75591,15 +75591,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1390"
+          "Value": "1393"
         },
         {
           "Name": "ETag",
-          "Value": "\"VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=\""
+          "Value": "\"7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75619,13 +75619,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=\""
+          "Value": "W/\"59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8="
+          "Value": "sha256-59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k="
         }
       ]
     },
@@ -75640,7 +75640,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4491"
+          "Value": "4484"
         },
         {
           "Name": "Content-Type",
@@ -75648,11 +75648,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=\""
+          "Value": "\"59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75662,13 +75662,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8="
+          "Value": "sha256-59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k="
         }
       ]
     },
     {
       "Route": "HospitalAppointmentSystem.Client.styles.css.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-5qm22k7s2o.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/1j9p2k3nqb-fmo52pklvk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -75677,7 +75677,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1390"
+          "Value": "1393"
         },
         {
           "Name": "Content-Type",
@@ -75685,11 +75685,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE=\""
+          "Value": "\"7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Sun, 18 May 2025 17:25:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75707,7 +75707,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VgYKhePhL3pHyTlRTxm74By/7zeCvl+RMnPTTgSbqBE="
+          "Value": "sha256-7ZIurYd47/WpRu1+/NghhHUFdeY9jkgR86hrgLeLVZ8="
         }
       ]
     },
@@ -75794,13 +75794,13 @@
       ]
     },
     {
-      "Route": "index.bljuqxispd.html",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-bljuqxispd.gz",
+      "Route": "index.html",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-mrtqunugj9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000993048659"
+          "Quality": "0.000577367206"
         }
       ],
       "ResponseHeaders": [
@@ -75810,19 +75810,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1006"
+          "Value": "1731"
         },
         {
           "Name": "ETag",
-          "Value": "\"atOlIzDusi/AZbeV8jVjHBKUAOtk9HlI0ddGey4KkmM=\""
+          "Value": "\"DtSt+3qBZ5Us57vmofnUggopbbS4bXAkHHQ3SPu7TR4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:16 GMT"
+          "Value": "Sun, 18 May 2025 17:35:46 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -75838,26 +75838,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc=\""
+          "Value": "W/\"zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "bljuqxispd"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc="
+          "Value": "sha256-zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY="
         }
       ]
     },
     {
-      "Route": "index.bljuqxispd.html",
+      "Route": "index.html",
       "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/wwwroot/index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -75867,7 +75859,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2146"
+          "Value": "4618"
         },
         {
           "Name": "Content-Type",
@@ -75875,11 +75867,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc=\""
+          "Value": "\"zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:16 GMT"
+          "Value": "Sun, 18 May 2025 17:35:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-mrtqunugj9.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DtSt+3qBZ5Us57vmofnUggopbbS4bXAkHHQ3SPu7TR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:35:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DtSt+3qBZ5Us57vmofnUggopbbS4bXAkHHQ3SPu7TR4="
+        }
+      ]
+    },
+    {
+      "Route": "index.mrtqunugj9.html",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-mrtqunugj9.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000577367206"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1731"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DtSt+3qBZ5Us57vmofnUggopbbS4bXAkHHQ3SPu7TR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:35:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mrtqunugj9"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY="
+        }
+      ]
+    },
+    {
+      "Route": "index.mrtqunugj9.html",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/wwwroot/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4618"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 18 May 2025 17:35:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75889,7 +76026,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bljuqxispd"
+          "Value": "mrtqunugj9"
         },
         {
           "Name": "label",
@@ -75897,13 +76034,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc="
+          "Value": "sha256-zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY="
         }
       ]
     },
     {
-      "Route": "index.bljuqxispd.html.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-bljuqxispd.gz",
+      "Route": "index.mrtqunugj9.html.gz",
+      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-mrtqunugj9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -75912,7 +76049,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1006"
+          "Value": "1731"
         },
         {
           "Name": "Content-Type",
@@ -75920,11 +76057,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"atOlIzDusi/AZbeV8jVjHBKUAOtk9HlI0ddGey4KkmM=\""
+          "Value": "\"DtSt+3qBZ5Us57vmofnUggopbbS4bXAkHHQ3SPu7TR4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:16 GMT"
+          "Value": "Sun, 18 May 2025 17:35:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -75942,7 +76079,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bljuqxispd"
+          "Value": "mrtqunugj9"
         },
         {
           "Name": "label",
@@ -75950,144 +76087,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-atOlIzDusi/AZbeV8jVjHBKUAOtk9HlI0ddGey4KkmM="
-        }
-      ]
-    },
-    {
-      "Route": "index.html",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-bljuqxispd.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000993048659"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1006"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"atOlIzDusi/AZbeV8jVjHBKUAOtk9HlI0ddGey4KkmM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc="
-        }
-      ]
-    },
-    {
-      "Route": "index.html",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/wwwroot/index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2146"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc="
-        }
-      ]
-    },
-    {
-      "Route": "index.html.gz",
-      "AssetFile": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/obj/Debug/net9.0/compressed/p576v8n4gl-bljuqxispd.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1006"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"atOlIzDusi/AZbeV8jVjHBKUAOtk9HlI0ddGey4KkmM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 15:45:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-atOlIzDusi/AZbeV8jVjHBKUAOtk9HlI0ddGey4KkmM="
+          "Value": "sha256-DtSt+3qBZ5Us57vmofnUggopbbS4bXAkHHQ3SPu7TR4="
         }
       ]
     },

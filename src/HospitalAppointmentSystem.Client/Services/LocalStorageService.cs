@@ -15,7 +15,8 @@ public class LocalStorageService : ILocalStorageService
     public async Task<T?> GetItemAsync<T>(string key)
     {
         var json = await _jsRuntime.InvokeAsync<string>("localStorage.getItem", key);
-        if (string.IsNullOrEmpty(json)) return default;
+        if (json == null)
+            return default;
         return JsonSerializer.Deserialize<T>(json);
     }
 

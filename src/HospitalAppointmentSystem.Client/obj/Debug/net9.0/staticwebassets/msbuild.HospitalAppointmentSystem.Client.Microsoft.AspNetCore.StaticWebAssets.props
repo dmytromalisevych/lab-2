@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
-      <Fingerprint>5qm22k7s2o</Fingerprint>
-      <Integrity>c55btbgPah+fek9nVyket/A9wNicLxGiR5McBrfk+b8=</Integrity>
+      <Fingerprint>fmo52pklvk</Fingerprint>
+      <Integrity>59FIX0aWcmEkBh0iB5Est6VQGvtgxJCFxHxCg1GNQ3k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HospitalAppointmentSystem.Client.styles.css'))</OriginalItemSpec>
@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>bljuqxispd</Fingerprint>
-      <Integrity>r1w6Xo+9mUAnOhAx2WaorfpeuMHSb7ZOdc9LvbZ/UHc=</Integrity>
+      <Fingerprint>mrtqunugj9</Fingerprint>
+      <Integrity>zmxY/Fy6ZsmLviPN8M8INpxtKp5CByk5OzslpkjVDaY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>

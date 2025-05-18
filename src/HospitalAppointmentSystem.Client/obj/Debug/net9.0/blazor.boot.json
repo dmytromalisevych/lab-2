@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "HospitalAppointmentSystem.Client",
   "resources": {
-    "hash": "sha256-lgIzCbCFCn2/xNEeG37hzxND9pHEzFI23L2tC3RYPic=",
+    "hash": "sha256-YXvoyPMzQv+UCuMx+iGdtyL14LwARx02fWVkEyBNS2g=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.n7we7nbch1.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.waskkzx0nn.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -210,8 +210,8 @@
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
       "HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm": "HospitalAppointmentSystem.Shared.wasm",
       "HospitalAppointmentSystem.Shared.d31k0zddk3.pdb": "HospitalAppointmentSystem.Shared.pdb",
-      "HospitalAppointmentSystem.Client.9z58se4a8c.wasm": "HospitalAppointmentSystem.Client.wasm",
-      "HospitalAppointmentSystem.Client.h9kd0gljdb.pdb": "HospitalAppointmentSystem.Client.pdb"
+      "HospitalAppointmentSystem.Client.xzvnnhme6z.wasm": "HospitalAppointmentSystem.Client.wasm",
+      "HospitalAppointmentSystem.Client.5y4989ktrx.pdb": "HospitalAppointmentSystem.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.8o8n7iomrf.js": "sha256-WIUiy49hHQ3kOAtRdCtUzm3Yg5BnOqCC+Q+kri9Fi1g="
@@ -429,11 +429,11 @@
       "mscorlib.l6md3pggqy.wasm": "sha256-jZgH0LixLeQKqaq33akQgDGhfE7vbXbHtvCId5HC0Yo=",
       "netstandard.lij9csiyuf.wasm": "sha256-DeeBl9s8G34N3IfYRQ+MoY807amodj8cvpuvUSNaWE4=",
       "HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm": "sha256-CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc=",
-      "HospitalAppointmentSystem.Client.9z58se4a8c.wasm": "sha256-RSQLajMAE19RjCpL6/LtQIrEXPnN/a2jwTwRCbw/P4o="
+      "HospitalAppointmentSystem.Client.xzvnnhme6z.wasm": "sha256-Q8N3JsYsey+IaEdD60g2o0HlzX4rFg+Dqi82d/oeYUw="
     },
     "pdb": {
       "HospitalAppointmentSystem.Shared.d31k0zddk3.pdb": "sha256-d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY=",
-      "HospitalAppointmentSystem.Client.h9kd0gljdb.pdb": "sha256-KwiYU0IYlcC2ngC+51BBLn5dU10OQZBumOJz5LYbagU="
+      "HospitalAppointmentSystem.Client.5y4989ktrx.pdb": "sha256-Tc0MEMK5w1p+RTtmSz8Hl5b4t4d8+29gk/qBNtH3Jko="
     }
   },
   "cacheBootResources": true,

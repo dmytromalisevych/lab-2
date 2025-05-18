@@ -1,33 +1,32 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.AspNetCore.Components.Authorization;
 using HospitalAppointmentSystem.Client;
+using HospitalAppointmentSystem.Client.Services;
+using HospitalAppointmentSystem.Client.Interfaces;
 
-public class Program
-{
-    public static async Task Main(string[] args)
-    {
-        try
-        {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            
-            // Додаємо логування
-            builder.Logging.SetMinimumLevel(LogLevel.Debug);
-            
-            builder.RootComponents.Add<App>("#app");
-            builder.RootComponents.Add<HeadOutlet>("head::after");
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-            builder.Services.AddScoped(sp => 
-                new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Logging.SetMinimumLevel(LogLevel.Debug);
 
-            var host = builder.Build();
-            
-            Console.WriteLine("Starting the application...");
-            await host.RunAsync();
-        }
-        catch (Exception ex)
-        {
-            Console.Error.WriteLine($"Application start failed: {ex}");
-            throw;
-        }
-    }
-}
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+builder.Services.AddScoped(sp => new HttpClient 
+{ 
+    BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) 
+});
+
+// Базовий HttpClient
+builder.Services.AddScoped(sp => 
+    new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+// Додаємо необхідні сервіси автентифікації
+builder.Services.AddScoped<IDataService, DataService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ILocalStorageService, LocalStorageService>();
+builder.Services.AddAuthorizationCore();
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+
+var host = builder.Build();
+await builder.Build().RunAsync();

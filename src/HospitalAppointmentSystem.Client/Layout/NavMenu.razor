@@ -65,7 +65,7 @@
 
     private async Task Logout()
     {
-        await AuthService.Logout();
+        await AuthService.LogoutAsync();  // Змінено на LogoutAsync
         NavigationManager.NavigateTo("/");
     }
 }

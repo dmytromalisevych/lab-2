@@ -55,7 +55,7 @@
     {
         try
         {
-            if (await AuthService.Register(_registerModel))
+            if (await AuthService.RegisterAsync(_registerModel))  // Змінено на RegisterAsync
             {
                 NavigationManager.NavigateTo("/login");
             }

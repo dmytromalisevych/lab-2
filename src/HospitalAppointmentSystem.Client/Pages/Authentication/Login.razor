@@ -50,7 +50,7 @@
     {
         try
         {
-            if (await AuthService.Login(_loginModel))
+            if (await AuthService.LoginAsync(_loginModel))  // Змінено на LoginAsync
             {
                 NavigationManager.NavigateTo("/");
             }
