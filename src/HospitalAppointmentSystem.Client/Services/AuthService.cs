@@ -1,7 +1,8 @@
 using System.Net.Http.Json;
+using Microsoft.AspNetCore.Components.Authorization;
 using HospitalAppointmentSystem.Client.Interfaces;
 using HospitalAppointmentSystem.Client.Models;
-using Microsoft.AspNetCore.Components.Authorization;
+using HospitalAppointmentSystem.Client.Auth;
 
 namespace HospitalAppointmentSystem.Client.Services
 {
@@ -20,32 +21,19 @@ namespace HospitalAppointmentSystem.Client.Services
             _authStateProvider = authStateProvider;
         }
 
-        public async Task<bool> LoginAsync(LoginModel model)
+        public async Task<bool> LoginAsync(LoginModel loginModel)
         {
             try
             {
-                var response = await _httpClient.PostAsJsonAsync("api/auth/login", model);
-                if (response.IsSuccessStatusCode)
-                {
-                    var token = await response.Content.ReadAsStringAsync();
-                    await _localStorage.SetItemAsync("authToken", token);
-                    (_authStateProvider as CustomAuthStateProvider)?.NotifyAuthenticationStateChanged();
-                    return true;
-                }
-                return false;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+                var response = await _httpClient.PostAsJsonAsync("api/auth/login", loginModel);
+                if (!response.IsSuccessStatusCode) return false;
 
-        public async Task<bool> RegisterAsync(RegisterModel model)
-        {
-            try
-            {
-                var response = await _httpClient.PostAsJsonAsync("api/auth/register", model);
-                return response.IsSuccessStatusCode;
+                var result = await response.Content.ReadFromJsonAsync<LoginResult>();
+                if (result?.Successful != true) return false;
+
+                await _localStorage.SetItemAsync("authToken", result.Token);
+                ((CustomAuthStateProvider)_authStateProvider).NotifyUserAuthentication(result.Token);
+                return true;
             }
             catch
             {
@@ -56,23 +44,22 @@ namespace HospitalAppointmentSystem.Client.Services
         public async Task LogoutAsync()
         {
             await _localStorage.RemoveItemAsync("authToken");
-            (_authStateProvider as CustomAuthStateProvider)?.NotifyAuthenticationStateChanged();
+            ((CustomAuthStateProvider)_authStateProvider).NotifyUserLogout();
         }
 
-        public async Task<User> GetCurrentUserAsync()
+        public async Task<bool> RegisterAsync(RegisterModel registerModel)
         {
             try
             {
-                var token = await _localStorage.GetItemAsync<string>("authToken");
-                if (string.IsNullOrEmpty(token))
-                    return null;
+                var response = await _httpClient.PostAsJsonAsync("api/auth/register", registerModel);
+                if (!response.IsSuccessStatusCode) return false;
 
-                var response = await _httpClient.GetFromJsonAsync<User>("api/auth/user");
-                return response;
+                var result = await response.Content.ReadFromJsonAsync<RegisterResult>();
+                return result?.Successful ?? false;
             }
             catch
             {
-                return null;
+                return false;
             }
         }
     }

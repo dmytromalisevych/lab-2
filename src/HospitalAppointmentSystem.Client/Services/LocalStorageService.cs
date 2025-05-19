@@ -1,32 +1,35 @@
 using Microsoft.JSInterop;
 using System.Text.Json;
+using HospitalAppointmentSystem.Client.Interfaces;
 
-namespace HospitalAppointmentSystem.Client.Services;
-
-public class LocalStorageService : ILocalStorageService
+namespace HospitalAppointmentSystem.Client.Services
 {
-    private readonly IJSRuntime _jsRuntime;
-
-    public LocalStorageService(IJSRuntime jsRuntime)
+    public class LocalStorageService : ILocalStorageService
     {
-        _jsRuntime = jsRuntime;
-    }
+        private readonly IJSRuntime _jsRuntime;
 
-    public async Task<T?> GetItemAsync<T>(string key)
-    {
-        var json = await _jsRuntime.InvokeAsync<string>("localStorage.getItem", key);
-        if (json == null)
-            return default;
-        return JsonSerializer.Deserialize<T>(json);
-    }
+        public LocalStorageService(IJSRuntime jsRuntime)
+        {
+            _jsRuntime = jsRuntime;
+        }
 
-    public async Task SetItemAsync<T>(string key, T value)
-    {
-        await _jsRuntime.InvokeVoidAsync("localStorage.setItem", key, JsonSerializer.Serialize(value));
-    }
+        public async Task<T> GetItemAsync<T>(string key)
+        {
+            var json = await _jsRuntime.InvokeAsync<string>("localStorage.getItem", key);
+            if (json == null)
+                return default;
 
-    public async Task RemoveItemAsync(string key)
-    {
-        await _jsRuntime.InvokeVoidAsync("localStorage.removeItem", key);
+            return JsonSerializer.Deserialize<T>(json);
+        }
+
+        public async Task SetItemAsync<T>(string key, T value)
+        {
+            await _jsRuntime.InvokeVoidAsync("localStorage.setItem", key, JsonSerializer.Serialize(value));
+        }
+
+        public async Task RemoveItemAsync(string key)
+        {
+            await _jsRuntime.InvokeVoidAsync("localStorage.removeItem", key);
+        }
     }
 }

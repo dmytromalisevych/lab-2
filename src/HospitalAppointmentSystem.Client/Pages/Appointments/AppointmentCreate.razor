@@ -3,6 +3,7 @@
 @using Microsoft.AspNetCore.Components.Forms
 @using HospitalAppointmentSystem.Client.Models
 @using HospitalAppointmentSystem.Client.Services
+
 @attribute [Authorize]
 @inject AppointmentService AppointmentService
 @inject NavigationManager NavigationManager
@@ -14,21 +15,39 @@
     <ValidationSummary />
 
     <div class="form-group">
-        <label>Дата:</label>
-        <InputDate @bind-Value="_appointment.Date" class="form-control" />
-        <ValidationMessage For="@(() => _appointment.Date)" />
-    </div>
-
-    <div class="form-group">
-        <label>Пацієнт:</label>
-        <InputText @bind-Value="_appointment.PatientName" class="form-control" />
-        <ValidationMessage For="@(() => _appointment.PatientName)" />
+        <label>Дата та час:</label>
+        <InputDate @bind-Value="@_appointment.DateTime" class="form-control" />
+        <ValidationMessage For="@(() => _appointment.DateTime)" />
     </div>
 
     <div class="form-group">
         <label>Лікар:</label>
-        <InputText @bind-Value="_appointment.DoctorName" class="form-control" />
-        <ValidationMessage For="@(() => _appointment.DoctorName)" />
+        <InputSelect @bind-Value="_appointment.DoctorId" class="form-control">
+            <option value="">-- Виберіть лікаря --</option>
+            @if (_doctors != null)
+            {
+                @foreach (var doctor in _doctors)
+                {
+                    <option value="@doctor.Id">@doctor.Name - @doctor.Specialization</option>
+                }
+            }
+        </InputSelect>
+        <ValidationMessage For="@(() => _appointment.DoctorId)" />
+    </div>
+
+    <div class="form-group">
+        <label>Пацієнт:</label>
+        <InputSelect @bind-Value="_appointment.PatientId" class="form-control">
+            <option value="">-- Виберіть пацієнта --</option>
+            @if (_patients != null)
+            {
+                @foreach (var patient in _patients)
+                {
+                    <option value="@patient.Id">@patient.Name</option>
+                }
+            }
+        </InputSelect>
+        <ValidationMessage For="@(() => _appointment.PatientId)" />
     </div>
 
     <div class="form-group">
@@ -42,7 +61,22 @@
 </EditForm>
 
 @code {
-    private Appointment _appointment = new() { Date = DateTime.Now };
+    private Appointment _appointment = new() { DateTime = DateTime.Now };
+    private List<Doctor> _doctors;
+    private List<Patient> _patients;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _doctors = await AppointmentService.GetDoctors();
+            _patients = await AppointmentService.GetPatients();
+        }
+        catch (Exception)
+        {
+            // Обробка помилок завантаження даних
+        }
+    }
 
     private async Task HandleSubmit()
     {
@@ -51,10 +85,9 @@
             await AppointmentService.CreateAppointment(_appointment);
             NavigationManager.NavigateTo("/appointments");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            // Можна додати обробку помилок, наприклад:
-            // await JSRuntime.InvokeVoidAsync("alert", $"Помилка: {ex.Message}");
+            // Обробка помилок створення запису
         }
     }
 }

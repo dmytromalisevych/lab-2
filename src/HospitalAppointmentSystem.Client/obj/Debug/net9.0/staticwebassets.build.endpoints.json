@@ -438,8 +438,8 @@
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb",
+      "Route": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -452,44 +452,44 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "52252"
+          "Value": "84245"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/octet-stream"
+          "Value": "application/wasm"
         },
         {
           "Name": "ETag",
-          "Value": "\"pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw=\""
+          "Value": "\"qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:20 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "nxia26xgbx"
+          "Value": "i6sgrp14d2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw="
+          "Value": "sha256-qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo="
         },
         {
           "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Client.pdb"
+          "Value": "_framework/HospitalAppointmentSystem.Client.wasm"
         }
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb.gz",
+      "Route": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000025532349"
+          "Quality": "0.000032633880"
         }
       ],
       "ResponseHeaders": [
@@ -507,23 +507,23 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39165"
+          "Value": "30642"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/octet-stream"
+          "Value": "application/wasm"
         },
         {
           "Name": "ETag",
-          "Value": "\"Aj+qOh3raBKGzq1PYhjW1cR0K+VsESAK5ZFf3p6KKpU=\""
+          "Value": "\"k1giDse/iJgWlux3sE61uc+VoDj5oQYZRRo9YJ4a6uI=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw=\""
+          "Value": "W/\"qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         },
         {
           "Name": "Vary",
@@ -533,21 +533,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "nxia26xgbx"
+          "Value": "i6sgrp14d2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw="
+          "Value": "sha256-qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo="
         },
         {
           "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Client.pdb"
+          "Value": "_framework/HospitalAppointmentSystem.Client.wasm"
         }
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb.gz",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb.gz",
+      "Route": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -564,19 +564,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39165"
+          "Value": "30642"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/octet-stream"
+          "Value": "application/wasm"
         },
         {
           "Name": "ETag",
-          "Value": "\"Aj+qOh3raBKGzq1PYhjW1cR0K+VsESAK5ZFf3p6KKpU=\""
+          "Value": "\"k1giDse/iJgWlux3sE61uc+VoDj5oQYZRRo9YJ4a6uI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         },
         {
           "Name": "Vary",
@@ -586,11 +586,172 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "nxia26xgbx"
+          "Value": "i6sgrp14d2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Aj+qOh3raBKGzq1PYhjW1cR0K+VsESAK5ZFf3p6KKpU="
+          "Value": "sha256-k1giDse/iJgWlux3sE61uc+VoDj5oQYZRRo9YJ4a6uI="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/HospitalAppointmentSystem.Client.wasm.gz"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54652"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nw07resfqu"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/HospitalAppointmentSystem.Client.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000024682216"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u7pPNRC9RiFFgglkBaixyYT/OBK8mMwf0NdfDym3eUA=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nw07resfqu"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/HospitalAppointmentSystem.Client.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u7pPNRC9RiFFgglkBaixyYT/OBK8mMwf0NdfDym3eUA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nw07resfqu"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u7pPNRC9RiFFgglkBaixyYT/OBK8mMwf0NdfDym3eUA="
         },
         {
           "Name": "label",
@@ -600,7 +761,7 @@
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.pdb",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -613,7 +774,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "52252"
+          "Value": "54652"
         },
         {
           "Name": "Content-Type",
@@ -621,28 +782,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw=\""
+          "Value": "\"V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:20 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw="
+          "Value": "sha256-V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.pdb",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000025532349"
+          "Quality": "0.000024682216"
         }
       ],
       "ResponseHeaders": [
@@ -660,7 +821,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39165"
+          "Value": "40514"
         },
         {
           "Name": "Content-Type",
@@ -668,15 +829,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Aj+qOh3raBKGzq1PYhjW1cR0K+VsESAK5ZFf3p6KKpU=\""
+          "Value": "\"u7pPNRC9RiFFgglkBaixyYT/OBK8mMwf0NdfDym3eUA=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw=\""
+          "Value": "W/\"V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         },
         {
           "Name": "Vary",
@@ -686,13 +847,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw="
+          "Value": "sha256-V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.pdb.gz",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nxia26xgbx.pdb.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.nw07resfqu.pdb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -709,7 +870,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "39165"
+          "Value": "40514"
         },
         {
           "Name": "Content-Type",
@@ -717,11 +878,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Aj+qOh3raBKGzq1PYhjW1cR0K+VsESAK5ZFf3p6KKpU=\""
+          "Value": "\"u7pPNRC9RiFFgglkBaixyYT/OBK8mMwf0NdfDym3eUA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         },
         {
           "Name": "Vary",
@@ -731,13 +892,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Aj+qOh3raBKGzq1PYhjW1cR0K+VsESAK5ZFf3p6KKpU="
+          "Value": "sha256-u7pPNRC9RiFFgglkBaixyYT/OBK8mMwf0NdfDym3eUA="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.wasm",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -750,7 +911,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "77077"
+          "Value": "84245"
         },
         {
           "Name": "Content-Type",
@@ -758,28 +919,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU=\""
+          "Value": "\"qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:20 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU="
+          "Value": "sha256-qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.wasm",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000036221385"
+          "Quality": "0.000032633880"
         }
       ],
       "ResponseHeaders": [
@@ -797,7 +958,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "27607"
+          "Value": "30642"
         },
         {
           "Name": "Content-Type",
@@ -805,15 +966,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"M3p0rF2dWdKhJmTckDthPGrI1HWHKJ61wf4I/nMez2A=\""
+          "Value": "\"k1giDse/iJgWlux3sE61uc+VoDj5oQYZRRo9YJ4a6uI=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU=\""
+          "Value": "W/\"qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         },
         {
           "Name": "Vary",
@@ -823,13 +984,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU="
+          "Value": "sha256-qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Client.wasm.gz",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Client.i6sgrp14d2.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -846,7 +1007,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "27607"
+          "Value": "30642"
         },
         {
           "Name": "Content-Type",
@@ -854,11 +1015,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"M3p0rF2dWdKhJmTckDthPGrI1HWHKJ61wf4I/nMez2A=\""
+          "Value": "\"k1giDse/iJgWlux3sE61uc+VoDj5oQYZRRo9YJ4a6uI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         },
         {
           "Name": "Vary",
@@ -868,13 +1029,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-M3p0rF2dWdKhJmTckDthPGrI1HWHKJ61wf4I/nMez2A="
+          "Value": "sha256-k1giDse/iJgWlux3sE61uc+VoDj5oQYZRRo9YJ4a6uI="
         }
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm",
+      "Route": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -887,7 +1048,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "77077"
+          "Value": "8469"
         },
         {
           "Name": "Content-Type",
@@ -895,182 +1056,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU=\""
+          "Value": "\"5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:20 GMT"
+          "Value": "Mon, 19 May 2025 06:37:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yq9ofniikp"
+          "Value": "c2lp0wk8t2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Client.wasm"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000036221385"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27607"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"M3p0rF2dWdKhJmTckDthPGrI1HWHKJ61wf4I/nMez2A=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yq9ofniikp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Client.wasm"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm.gz",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Client.yq9ofniikp.wasm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "27607"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"M3p0rF2dWdKhJmTckDthPGrI1HWHKJ61wf4I/nMez2A=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "yq9ofniikp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-M3p0rF2dWdKhJmTckDthPGrI1HWHKJ61wf4I/nMez2A="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Client.wasm.gz"
-        }
-      ]
-    },
-    {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6933"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/wasm"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "a0s9q0exv4"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc="
+          "Value": "sha256-5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI="
         },
         {
           "Name": "label",
@@ -1079,13 +1079,13 @@
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm.gz",
+      "Route": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000362713094"
+          "Quality": "0.000300120048"
         }
       ],
       "ResponseHeaders": [
@@ -1103,7 +1103,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2756"
+          "Value": "3331"
         },
         {
           "Name": "Content-Type",
@@ -1111,15 +1111,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jrB56PI6VgkEqxrl3vwka0a4gtNNFcrZTnjhke3xnKo=\""
+          "Value": "\"wU1XEIcDZfpXvh2uv9veA4q4x5Vz/RX5J7r5TES2F2s=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc=\""
+          "Value": "W/\"5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:15 GMT"
+          "Value": "Mon, 19 May 2025 06:37:12 GMT"
         },
         {
           "Name": "Vary",
@@ -1129,11 +1129,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "a0s9q0exv4"
+          "Value": "c2lp0wk8t2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc="
+          "Value": "sha256-5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI="
         },
         {
           "Name": "label",
@@ -1142,8 +1142,8 @@
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm.gz",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm.gz",
+      "Route": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1160,7 +1160,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2756"
+          "Value": "3331"
         },
         {
           "Name": "Content-Type",
@@ -1168,11 +1168,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jrB56PI6VgkEqxrl3vwka0a4gtNNFcrZTnjhke3xnKo=\""
+          "Value": "\"wU1XEIcDZfpXvh2uv9veA4q4x5Vz/RX5J7r5TES2F2s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:15 GMT"
+          "Value": "Mon, 19 May 2025 06:37:12 GMT"
         },
         {
           "Name": "Vary",
@@ -1182,11 +1182,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "a0s9q0exv4"
+          "Value": "c2lp0wk8t2"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jrB56PI6VgkEqxrl3vwka0a4gtNNFcrZTnjhke3xnKo="
+          "Value": "sha256-wU1XEIcDZfpXvh2uv9veA4q4x5Vz/RX5J7r5TES2F2s="
         },
         {
           "Name": "label",
@@ -1195,8 +1195,8 @@
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb",
+      "Route": "_framework/HospitalAppointmentSystem.Shared.pdb",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1205,11 +1205,11 @@
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Length",
-          "Value": "11736"
+          "Value": "12556"
         },
         {
           "Name": "Content-Type",
@@ -1217,36 +1217,173 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY=\""
+          "Value": "\"FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 09:22:21 GMT"
+          "Value": "Mon, 19 May 2025 06:20:10 GMT"
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "d31k0zddk3"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY="
-        },
-        {
-          "Name": "label",
-          "Value": "_framework/HospitalAppointmentSystem.Shared.pdb"
+          "Value": "sha256-FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14="
         }
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb.gz",
+      "Route": "_framework/HospitalAppointmentSystem.Shared.pdb",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000147950880"
+          "Quality": "0.000139938427"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7145"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bsaUYWE/rYlQgKeX9f/ddjxs82kxpS/VKoZbujcZLM8=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 06:37:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Shared.pdb.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7145"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bsaUYWE/rYlQgKeX9f/ddjxs82kxpS/VKoZbujcZLM8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 06:37:12 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bsaUYWE/rYlQgKeX9f/ddjxs82kxpS/VKoZbujcZLM8="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12556"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 06:20:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "urc55kmrxq"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14="
+        },
+        {
+          "Name": "label",
+          "Value": "_framework/HospitalAppointmentSystem.Shared.pdb"
+        }
+      ]
+    },
+    {
+      "Route": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000139938427"
         }
       ],
       "ResponseHeaders": [
@@ -1264,7 +1401,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6758"
+          "Value": "7145"
         },
         {
           "Name": "Content-Type",
@@ -1272,15 +1409,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"iKyUZuSM8WJxVOufW0R7Q1oBo1EtORSBndnQ2IRtCYs=\""
+          "Value": "\"bsaUYWE/rYlQgKeX9f/ddjxs82kxpS/VKoZbujcZLM8=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY=\""
+          "Value": "W/\"FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:15 GMT"
+          "Value": "Mon, 19 May 2025 06:37:12 GMT"
         },
         {
           "Name": "Vary",
@@ -1290,11 +1427,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "d31k0zddk3"
+          "Value": "urc55kmrxq"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY="
+          "Value": "sha256-FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14="
         },
         {
           "Name": "label",
@@ -1303,8 +1440,8 @@
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb.gz",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb.gz",
+      "Route": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.urc55kmrxq.pdb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1321,7 +1458,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6758"
+          "Value": "7145"
         },
         {
           "Name": "Content-Type",
@@ -1329,11 +1466,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"iKyUZuSM8WJxVOufW0R7Q1oBo1EtORSBndnQ2IRtCYs=\""
+          "Value": "\"bsaUYWE/rYlQgKeX9f/ddjxs82kxpS/VKoZbujcZLM8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:15 GMT"
+          "Value": "Mon, 19 May 2025 06:37:12 GMT"
         },
         {
           "Name": "Vary",
@@ -1343,11 +1480,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "d31k0zddk3"
+          "Value": "urc55kmrxq"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-iKyUZuSM8WJxVOufW0R7Q1oBo1EtORSBndnQ2IRtCYs="
+          "Value": "sha256-bsaUYWE/rYlQgKeX9f/ddjxs82kxpS/VKoZbujcZLM8="
         },
         {
           "Name": "label",
@@ -1356,145 +1493,8 @@
       ]
     },
     {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.pdb",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "11736"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 09:22:21 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.pdb",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000147950880"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6758"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iKyUZuSM8WJxVOufW0R7Q1oBo1EtORSBndnQ2IRtCYs=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:15 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/HospitalAppointmentSystem.Shared.pdb.gz",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.d31k0zddk3.pdb.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6758"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iKyUZuSM8WJxVOufW0R7Q1oBo1EtORSBndnQ2IRtCYs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:15 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-iKyUZuSM8WJxVOufW0R7Q1oBo1EtORSBndnQ2IRtCYs="
-        }
-      ]
-    },
-    {
       "Route": "_framework/HospitalAppointmentSystem.Shared.wasm",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1507,7 +1507,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6933"
+          "Value": "8469"
         },
         {
           "Name": "Content-Type",
@@ -1515,28 +1515,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc=\""
+          "Value": "\"5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:14 GMT"
+          "Value": "Mon, 19 May 2025 06:37:11 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc="
+          "Value": "sha256-5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Shared.wasm",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000362713094"
+          "Quality": "0.000300120048"
         }
       ],
       "ResponseHeaders": [
@@ -1554,7 +1554,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2756"
+          "Value": "3331"
         },
         {
           "Name": "Content-Type",
@@ -1562,15 +1562,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jrB56PI6VgkEqxrl3vwka0a4gtNNFcrZTnjhke3xnKo=\""
+          "Value": "\"wU1XEIcDZfpXvh2uv9veA4q4x5Vz/RX5J7r5TES2F2s=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc=\""
+          "Value": "W/\"5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:15 GMT"
+          "Value": "Mon, 19 May 2025 06:37:12 GMT"
         },
         {
           "Name": "Vary",
@@ -1580,13 +1580,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc="
+          "Value": "sha256-5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI="
         }
       ]
     },
     {
       "Route": "_framework/HospitalAppointmentSystem.Shared.wasm.gz",
-      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm.gz",
+      "AssetFile": "_framework/HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1603,7 +1603,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2756"
+          "Value": "3331"
         },
         {
           "Name": "Content-Type",
@@ -1611,11 +1611,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jrB56PI6VgkEqxrl3vwka0a4gtNNFcrZTnjhke3xnKo=\""
+          "Value": "\"wU1XEIcDZfpXvh2uv9veA4q4x5Vz/RX5J7r5TES2F2s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 13:16:15 GMT"
+          "Value": "Mon, 19 May 2025 06:37:12 GMT"
         },
         {
           "Name": "Vary",
@@ -1625,7 +1625,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jrB56PI6VgkEqxrl3vwka0a4gtNNFcrZTnjhke3xnKo="
+          "Value": "sha256-wU1XEIcDZfpXvh2uv9veA4q4x5Vz/RX5J7r5TES2F2s="
         }
       ]
     },
@@ -6424,7 +6424,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:38 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         }
       ],
       "EndpointProperties": [
@@ -6483,7 +6483,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -6536,7 +6536,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -6585,7 +6585,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:38 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         }
       ],
       "EndpointProperties": [
@@ -6644,7 +6644,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -6697,7 +6697,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -6746,7 +6746,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:38 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         }
       ],
       "EndpointProperties": [
@@ -6797,7 +6797,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -6842,7 +6842,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -6883,7 +6883,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:38 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         }
       ],
       "EndpointProperties": [
@@ -6934,7 +6934,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -6979,7 +6979,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -7914,7 +7914,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:38 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         }
       ],
       "EndpointProperties": [
@@ -7973,7 +7973,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -8026,7 +8026,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -8075,7 +8075,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:38 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         }
       ],
       "EndpointProperties": [
@@ -8126,7 +8126,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -8171,7 +8171,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -8969,7 +8969,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:38 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         }
       ],
       "EndpointProperties": [
@@ -9028,7 +9028,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -9081,7 +9081,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -9130,7 +9130,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:38 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         }
       ],
       "EndpointProperties": [
@@ -9181,7 +9181,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -9226,7 +9226,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:39 GMT"
+          "Value": "Mon, 19 May 2025 08:21:24 GMT"
         },
         {
           "Name": "Vary",
@@ -59762,17 +59762,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"k9AX9gve2cK7hXGLmBGtnc6NoyRwI6dzuMqQA5cR5GU=\""
+          "Value": "\"oUUdOQwh+Fu6BK3E19QnlnrkHon+6jtbAjg9tFNY8JI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:06:21 GMT"
+          "Value": "Mon, 19 May 2025 08:33:04 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-k9AX9gve2cK7hXGLmBGtnc6NoyRwI6dzuMqQA5cR5GU="
+          "Value": "sha256-oUUdOQwh+Fu6BK3E19QnlnrkHon+6jtbAjg9tFNY8JI="
         }
       ]
     },
@@ -59783,7 +59783,7 @@
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000078082299"
+          "Quality": "0.000078106694"
         }
       ],
       "ResponseHeaders": [
@@ -59801,7 +59801,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12806"
+          "Value": "12802"
         },
         {
           "Name": "Content-Type",
@@ -59809,15 +59809,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kbaN8aKQoAuOciuIoGC+bfj1jmOUym0vp1namJpRrJg=\""
+          "Value": "\"FHOlOOkRirZ0kmA5ZlTDRXYqYEFLedP6mdG1krVf3xo=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"k9AX9gve2cK7hXGLmBGtnc6NoyRwI6dzuMqQA5cR5GU=\""
+          "Value": "W/\"oUUdOQwh+Fu6BK3E19QnlnrkHon+6jtbAjg9tFNY8JI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:57 GMT"
+          "Value": "Mon, 19 May 2025 08:30:40 GMT"
         },
         {
           "Name": "Vary",
@@ -59827,7 +59827,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-k9AX9gve2cK7hXGLmBGtnc6NoyRwI6dzuMqQA5cR5GU="
+          "Value": "sha256-oUUdOQwh+Fu6BK3E19QnlnrkHon+6jtbAjg9tFNY8JI="
         }
       ]
     },
@@ -59850,7 +59850,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12806"
+          "Value": "12802"
         },
         {
           "Name": "Content-Type",
@@ -59858,11 +59858,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kbaN8aKQoAuOciuIoGC+bfj1jmOUym0vp1namJpRrJg=\""
+          "Value": "\"FHOlOOkRirZ0kmA5ZlTDRXYqYEFLedP6mdG1krVf3xo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 19:57:57 GMT"
+          "Value": "Mon, 19 May 2025 08:30:40 GMT"
         },
         {
           "Name": "Vary",
@@ -59872,7 +59872,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kbaN8aKQoAuOciuIoGC+bfj1jmOUym0vp1namJpRrJg="
+          "Value": "sha256-FHOlOOkRirZ0kmA5ZlTDRXYqYEFLedP6mdG1krVf3xo="
         }
       ]
     },
@@ -64052,13 +64052,174 @@
       ]
     },
     {
+      "Route": "index.06rcc70b82.html",
+      "AssetFile": "index.html.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001650165017"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "605"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JW1RWFx6YTTMRWiB3XPb8Q7liVwQf+p1HQgk/jiO6Cw=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:32:53 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "06rcc70b82"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E="
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        }
+      ]
+    },
+    {
+      "Route": "index.06rcc70b82.html",
+      "AssetFile": "index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1093"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:32:53 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "06rcc70b82"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E="
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        }
+      ]
+    },
+    {
+      "Route": "index.06rcc70b82.html.gz",
+      "AssetFile": "index.html.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "605"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JW1RWFx6YTTMRWiB3XPb8Q7liVwQf+p1HQgk/jiO6Cw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:32:53 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "06rcc70b82"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JW1RWFx6YTTMRWiB3XPb8Q7liVwQf+p1HQgk/jiO6Cw="
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        }
+      ]
+    },
+    {
       "Route": "index.html",
       "AssetFile": "index.html.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001394700139"
+          "Quality": "0.001650165017"
         }
       ],
       "ResponseHeaders": [
@@ -64076,7 +64237,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "716"
+          "Value": "605"
         },
         {
           "Name": "Content-Type",
@@ -64084,15 +64245,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QlK+A3bLq7c74xtwn6Qs0gm5AInR85b5uQEkhAkh7gk=\""
+          "Value": "\"JW1RWFx6YTTMRWiB3XPb8Q7liVwQf+p1HQgk/jiO6Cw=\""
         },
         {
           "Name": "ETag",
-          "Value": "W/\"AkP4/vupHu53Q5LpoFQAZd7espCebqRSz7aGyKSdEgo=\""
+          "Value": "W/\"iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:05:39 GMT"
+          "Value": "Mon, 19 May 2025 08:32:53 GMT"
         },
         {
           "Name": "Vary",
@@ -64102,7 +64263,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AkP4/vupHu53Q5LpoFQAZd7espCebqRSz7aGyKSdEgo="
+          "Value": "sha256-iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E="
         }
       ]
     },
@@ -64121,7 +64282,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1321"
+          "Value": "1093"
         },
         {
           "Name": "Content-Type",
@@ -64129,17 +64290,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"AkP4/vupHu53Q5LpoFQAZd7espCebqRSz7aGyKSdEgo=\""
+          "Value": "\"iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:05:39 GMT"
+          "Value": "Mon, 19 May 2025 08:32:53 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-AkP4/vupHu53Q5LpoFQAZd7espCebqRSz7aGyKSdEgo="
+          "Value": "sha256-iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E="
         }
       ]
     },
@@ -64162,7 +64323,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "716"
+          "Value": "605"
         },
         {
           "Name": "Content-Type",
@@ -64170,11 +64331,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QlK+A3bLq7c74xtwn6Qs0gm5AInR85b5uQEkhAkh7gk=\""
+          "Value": "\"JW1RWFx6YTTMRWiB3XPb8Q7liVwQf+p1HQgk/jiO6Cw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:05:39 GMT"
+          "Value": "Mon, 19 May 2025 08:32:53 GMT"
         },
         {
           "Name": "Vary",
@@ -64184,168 +64345,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QlK+A3bLq7c74xtwn6Qs0gm5AInR85b5uQEkhAkh7gk="
-        }
-      ]
-    },
-    {
-      "Route": "index.ywip7swv9d.html",
-      "AssetFile": "index.html.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001394700139"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "716"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QlK+A3bLq7c74xtwn6Qs0gm5AInR85b5uQEkhAkh7gk=\""
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"AkP4/vupHu53Q5LpoFQAZd7espCebqRSz7aGyKSdEgo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:05:39 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ywip7swv9d"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-AkP4/vupHu53Q5LpoFQAZd7espCebqRSz7aGyKSdEgo="
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        }
-      ]
-    },
-    {
-      "Route": "index.ywip7swv9d.html",
-      "AssetFile": "index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1321"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"AkP4/vupHu53Q5LpoFQAZd7espCebqRSz7aGyKSdEgo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:05:39 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ywip7swv9d"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-AkP4/vupHu53Q5LpoFQAZd7espCebqRSz7aGyKSdEgo="
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        }
-      ]
-    },
-    {
-      "Route": "index.ywip7swv9d.html.gz",
-      "AssetFile": "index.html.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "716"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"QlK+A3bLq7c74xtwn6Qs0gm5AInR85b5uQEkhAkh7gk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:05:39 GMT"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ywip7swv9d"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-QlK+A3bLq7c74xtwn6Qs0gm5AInR85b5uQEkhAkh7gk="
-        },
-        {
-          "Name": "label",
-          "Value": "index.html.gz"
+          "Value": "sha256-JW1RWFx6YTTMRWiB3XPb8Q7liVwQf+p1HQgk/jiO6Cw="
         }
       ]
     },
@@ -77458,6 +77458,304 @@
         {
           "Name": "label",
           "Value": "lib/bootstrap/dist/js/bootstrap.js.gz"
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/js/indexedDB.cvxeb4ynsi.js",
+      "AssetFile": "lib/bootstrap/dist/js/indexedDB.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001618122977"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "617"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"26+790bES2TgyJWS6xO20yKtKO2eelll9FKD9WWwQeY=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:28:33 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cvxeb4ynsi"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/js/indexedDB.js"
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/js/indexedDB.cvxeb4ynsi.js",
+      "AssetFile": "lib/bootstrap/dist/js/indexedDB.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:28:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cvxeb4ynsi"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/js/indexedDB.js"
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/js/indexedDB.cvxeb4ynsi.js.gz",
+      "AssetFile": "lib/bootstrap/dist/js/indexedDB.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "617"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"26+790bES2TgyJWS6xO20yKtKO2eelll9FKD9WWwQeY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:28:33 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cvxeb4ynsi"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-26+790bES2TgyJWS6xO20yKtKO2eelll9FKD9WWwQeY="
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/js/indexedDB.js.gz"
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/js/indexedDB.js",
+      "AssetFile": "lib/bootstrap/dist/js/indexedDB.js.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001618122977"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "617"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"26+790bES2TgyJWS6xO20yKtKO2eelll9FKD9WWwQeY=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:28:33 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/js/indexedDB.js",
+      "AssetFile": "lib/bootstrap/dist/js/indexedDB.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:28:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/js/indexedDB.js.gz",
+      "AssetFile": "lib/bootstrap/dist/js/indexedDB.js.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "617"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"26+790bES2TgyJWS6xO20yKtKO2eelll9FKD9WWwQeY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 08:28:33 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-26+790bES2TgyJWS6xO20yKtKO2eelll9FKD9WWwQeY="
         }
       ]
     },

@@ -1,28 +1,26 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.EntityFrameworkCore;
 using HospitalAppointmentSystem.Client;
 using HospitalAppointmentSystem.Client.Services;
-using HospitalAppointmentSystem.Client.Interfaces;
+using HospitalAppointmentSystem.Client.Models;
+using HospitalAppointmentSystem.Client.Auth;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-
-builder.Logging.SetMinimumLevel(LogLevel.Debug);
-
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-// Базовий HttpClient (видалено дублювання)
-builder.Services.AddScoped(sp => 
-    new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-// Додаємо необхідні сервіси автентифікації
-builder.Services.AddScoped<IDataService, DataService>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<ILocalStorageService, LocalStorageService>();
+// Додаємо сервіси авторизації
 builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+builder.Services.AddScoped<ILocalStorageService, LocalStorageService>();
+builder.Services.AddScoped<AuthService>();
 
-// Виправлено подвійний виклик Build()
-var host = builder.Build();
-await host.RunAsync();
+// Додаємо сервіси для роботи з даними
+builder.Services.AddScoped<AppointmentService>();
+builder.Services.AddScoped<IDataService, DataService>();
+
+await builder.Build().RunAsync();

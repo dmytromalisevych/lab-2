@@ -1,8 +1,9 @@
-namespace HospitalAppointmentSystem.Client.Services;
-
-public interface ILocalStorageService
+namespace HospitalAppointmentSystem.Client.Services
 {
-    Task<T?> GetItemAsync<T>(string key);
-    Task SetItemAsync<T>(string key, T value);
-    Task RemoveItemAsync(string key);
+    public interface ILocalStorageService
+    {
+        Task<T> GetItemAsync<T>(string key);
+        Task SetItemAsync<T>(string key, T value);
+        Task RemoveItemAsync(string key);
+    }
 }

@@ -4,9 +4,8 @@ namespace HospitalAppointmentSystem.Client.Interfaces
 {
     public interface IAuthService
     {
-        Task<bool> LoginAsync(LoginModel model);
-        Task<bool> RegisterAsync(RegisterModel model);
+        Task<bool> LoginAsync(LoginModel loginModel);
         Task LogoutAsync();
-        Task<User> GetCurrentUserAsync();
+        Task<bool> RegisterAsync(RegisterModel registerModel);
     }
 }

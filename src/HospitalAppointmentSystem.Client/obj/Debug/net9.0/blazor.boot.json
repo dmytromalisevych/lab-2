@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "HospitalAppointmentSystem.Client",
   "resources": {
-    "hash": "sha256-/3uEOAxIYAp9GctFHQ92g/OwVnmNI+X/+Y6hntqEoPo=",
+    "hash": "sha256-Ot4z9VFS/jJkXE8loa+ITHazqicHClLAmiZqyzhguT0=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.n7we7nbch1.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.waskkzx0nn.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -207,10 +207,10 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm": "HospitalAppointmentSystem.Shared.wasm",
-      "HospitalAppointmentSystem.Shared.d31k0zddk3.pdb": "HospitalAppointmentSystem.Shared.pdb",
-      "HospitalAppointmentSystem.Client.yq9ofniikp.wasm": "HospitalAppointmentSystem.Client.wasm",
-      "HospitalAppointmentSystem.Client.nxia26xgbx.pdb": "HospitalAppointmentSystem.Client.pdb"
+      "HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm": "HospitalAppointmentSystem.Shared.wasm",
+      "HospitalAppointmentSystem.Shared.urc55kmrxq.pdb": "HospitalAppointmentSystem.Shared.pdb",
+      "HospitalAppointmentSystem.Client.i6sgrp14d2.wasm": "HospitalAppointmentSystem.Client.wasm",
+      "HospitalAppointmentSystem.Client.nw07resfqu.pdb": "HospitalAppointmentSystem.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.8o8n7iomrf.js": "sha256-WIUiy49hHQ3kOAtRdCtUzm3Yg5BnOqCC+Q+kri9Fi1g="
@@ -426,12 +426,12 @@
       "WindowsBase.ovqw333kan.wasm": "sha256-7LCr4nX9JSGuwzMr8Rk8TGvC6ApzQNxCDiMV/0I9JlI=",
       "mscorlib.l6md3pggqy.wasm": "sha256-jZgH0LixLeQKqaq33akQgDGhfE7vbXbHtvCId5HC0Yo=",
       "netstandard.lij9csiyuf.wasm": "sha256-DeeBl9s8G34N3IfYRQ+MoY807amodj8cvpuvUSNaWE4=",
-      "HospitalAppointmentSystem.Shared.a0s9q0exv4.wasm": "sha256-CnCpMHeEwnRkZDZc0B0N8qW827UnvdV7hO6Xm+EIznc=",
-      "HospitalAppointmentSystem.Client.yq9ofniikp.wasm": "sha256-pu3hxGmP5ZTeUbe+Ia4aUM43sQMM5GT4HEcaJObO2cU="
+      "HospitalAppointmentSystem.Shared.c2lp0wk8t2.wasm": "sha256-5PbahQYsR8hFlw2pGY018G5t/GPaFoc4Bs3XduNWViI=",
+      "HospitalAppointmentSystem.Client.i6sgrp14d2.wasm": "sha256-qgGnixmrbW5ZIdTX5i6fzVO4rXFZcJRPygArh3i4weo="
     },
     "pdb": {
-      "HospitalAppointmentSystem.Shared.d31k0zddk3.pdb": "sha256-d0EA348f8jjbK5X3Twk1dKFFNizU9clbQFyTr15h9tY=",
-      "HospitalAppointmentSystem.Client.nxia26xgbx.pdb": "sha256-pVdRfw1EYzuJw/lgZnm7whKSe4vF8uQOEFS+/Sd8sFw="
+      "HospitalAppointmentSystem.Shared.urc55kmrxq.pdb": "sha256-FhtipdZK+uCs20ZdtLEiHa2mcyWeS+v0Xxk6B8i4b14=",
+      "HospitalAppointmentSystem.Client.nw07resfqu.pdb": "sha256-V3OrFxrMRl5hdoxizPvvDaQhrLvRphZlnixRvnOdlsU="
     }
   },
   "cacheBootResources": true,

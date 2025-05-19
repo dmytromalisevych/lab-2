@@ -1,14 +1,22 @@
-﻿@using System.Threading.Tasks
-
-<Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
-    </Found>
-    <NotFound>
-        <PageTitle>Не знайдено</PageTitle>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Вибачте, за цією адресою нічого не знайдено.</p>
-        </LayoutView>
-    </NotFound>
-</Router>
+﻿<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                <NotAuthorized>
+                    <RedirectToLogin />
+                </NotAuthorized>
+                <Authorizing>
+                    <div class="loading-message">
+                        <p>Авторизація...</p>
+                    </div>
+                </Authorizing>
+            </AuthorizeRouteView>
+        </Found>
+        <NotFound>
+            <PageTitle>Не знайдено</PageTitle>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p>Вибачте, за цією адресою нічого не знайдено.</p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>

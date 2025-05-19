@@ -1,47 +1,74 @@
-using System.Net.Http.Json;
+using Microsoft.EntityFrameworkCore;
 using HospitalAppointmentSystem.Client.Models;
 
-namespace HospitalAppointmentSystem.Client.Services;
-
-public class AppointmentService
+namespace HospitalAppointmentSystem.Client.Services
 {
-    private readonly HttpClient _httpClient;
-
-    public AppointmentService(HttpClient httpClient)
+    public class AppointmentService
     {
-        _httpClient = httpClient;
-    }
+        private readonly AppDbContext _context;
 
-    public async Task<List<Appointment>> GetAppointments()
-    {
-        return await _httpClient.GetFromJsonAsync<List<Appointment>>("api/appointments") ?? new List<Appointment>();
-    }
+        public AppointmentService(AppDbContext context)
+        {
+            _context = context;
+        }
+        public async Task<List<Doctor>> GetDoctors()
+        {
+            return await _context.Doctors.ToListAsync();
+        }
 
-    public async Task<Appointment> GetAppointment(int id)
-    {
-        return await _httpClient.GetFromJsonAsync<Appointment>($"api/appointments/{id}")
-               ?? throw new Exception("Запис не знайдено");
-    }
+        public async Task<List<Patient>> GetPatients()
+        {
+            return await _context.Patients.ToListAsync();
+        }
+        public async Task<List<Appointment>> GetAppointments()
+        {
+            return await _context.Appointments
+                .Include(a => a.Doctor)
+                .Include(a => a.Patient)
+                .ToListAsync();
+        }
 
-    public async Task<Appointment> CreateAppointment(Appointment appointment)
-    {
-        var response = await _httpClient.PostAsJsonAsync("api/appointments", appointment);
-        response.EnsureSuccessStatusCode();
-        return await response.Content.ReadFromJsonAsync<Appointment>()
-               ?? throw new Exception("Помилка при створенні запису");
-    }
+        public async Task<Appointment> GetAppointment(int id)
+        {
+            var appointment = await _context.Appointments
+                .Include(a => a.Doctor)
+                .Include(a => a.Patient)
+                .FirstOrDefaultAsync(a => a.Id == id);
 
-    public async Task<Appointment> UpdateAppointment(int id, Appointment appointment)
-    {
-        var response = await _httpClient.PutAsJsonAsync($"api/appointments/{id}", appointment);
-        response.EnsureSuccessStatusCode();
-        return await response.Content.ReadFromJsonAsync<Appointment>()
-               ?? throw new Exception("Помилка при оновленні запису");
-    }
+            if (appointment == null)
+                throw new Exception("Запис не знайдено");
 
-    public async Task DeleteAppointment(int id)
-    {
-        var response = await _httpClient.DeleteAsync($"api/appointments/{id}");
-        response.EnsureSuccessStatusCode();
+            return appointment;
+        }
+
+        public async Task CreateAppointment(Appointment appointment)
+        {
+            _context.Appointments.Add(appointment);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAppointment(int id, Appointment appointment)
+        {
+            var existingAppointment = await _context.Appointments.FindAsync(id);
+            if (existingAppointment == null)
+                throw new Exception("Запис не знайдено");
+
+            existingAppointment.DateTime = appointment.DateTime;
+            existingAppointment.DoctorId = appointment.DoctorId;
+            existingAppointment.PatientId = appointment.PatientId;
+            existingAppointment.Description = appointment.Description;
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAppointment(int id)
+        {
+            var appointment = await _context.Appointments.FindAsync(id);
+            if (appointment != null)
+            {
+                _context.Appointments.Remove(appointment);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

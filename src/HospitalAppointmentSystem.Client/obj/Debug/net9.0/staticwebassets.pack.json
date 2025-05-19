@@ -205,6 +205,10 @@
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
+      "Id": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/wwwroot/lib/bootstrap/dist/js/indexedDB.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/indexedDB.js"
+    },
+    {
       "Id": "/Users/dmytromalisevych/Desktop/Всі папки/Унік/Другий курс/Другий семестр/ASP.net/lab-6/src/HospitalAppointmentSystem.Client/wwwroot/sample-data/weather.json",
       "PackagePath": "staticwebassets/sample-data/weather.json"
     },
