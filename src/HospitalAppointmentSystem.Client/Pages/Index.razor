@@ -1,70 +1,165 @@
-@page "/appointments"
-@using Microsoft.AspNetCore.Authorization
-@using HospitalAppointmentSystem.Client.Models
-@using HospitalAppointmentSystem.Client.Services
-@attribute [Authorize]
-@inject AppointmentService AppointmentService
-@inject NavigationManager NavigationManager
-@inject IJSRuntime JS
+@page "/"
+@attribute [AllowAnonymous]
 
-<h3>Записи на прийом</h3>
+<PageTitle>Головна - Система запису до лікаря</PageTitle>
 
-<div class="mb-3">
-    <a href="/appointments/create" class="btn btn-primary">Створити новий запис</a>
+<div class="welcome-container">
+    <div class="hero-section">
+        <h1>Система запису до лікаря</h1>
+        <p class="lead">Зручний сервіс для запису на прийом до лікаря онлайн</p>
+    </div>
+
+    <div class="content-section">
+        <AuthorizeView>
+            <Authorized>
+                <div class="dashboard-panel">
+                    <h2>Особистий кабінет</h2>
+                    <div class="action-buttons">
+                        <a href="/appointments/new" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar-plus"></i>
+                            Записатися на прийом
+                        </a>
+                        <a href="/appointments" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-calendar-alt"></i>
+                            Мої записи
+                        </a>
+                    </div>
+                </div>
+            </Authorized>
+            <NotAuthorized>
+                <div class="auth-panel">
+                    <h2>Розпочніть роботу</h2>
+                    <p>Для запису на прийом, будь ласка, увійдіть в систему</p>
+                    <div class="auth-buttons">
+                        <a href="/login" class="btn btn-primary btn-lg">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Увійти
+                        </a>
+                        <a href="/register" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-user-plus"></i>
+                            Зареєструватися
+                        </a>
+                    </div>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+
+        <div class="features-section">
+            <div class="feature-card">
+                <i class="fas fa-clock fa-2x"></i>
+                <h3>Швидкий запис</h3>
+                <p>Записуйтесь на прийом онлайн в будь-який час</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-calendar-check fa-2x"></i>
+                <h3>Керування записами</h3>
+                <p>Зручне управління вашими записами</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-md fa-2x"></i>
+                <h3>Кваліфіковані лікарі</h3>
+                <p>Доступ до професійних медичних послуг</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-@if (_appointments == null)
-{
-    <p>Завантаження...</p>
-}
-else
-{
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Дата та час</th>
-            <th>Лікар</th>
-            <th>Опис</th>
-            <th>Дії</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var appointment in _appointments)
-        {
-            <tr>
-                <td>@appointment.DateTime.ToString("dd.MM.yyyy HH:mm")</td>
-                <td>@(appointment.Doctor?.Name ?? "Не вказано")</td>
-                <td>@appointment.Description</td>
-                <td>
-                    <a href="@($"/appointments/{appointment.Id}")" class="btn btn-info btn-sm">Деталі</a>
-                    <a href="@($"/appointments/edit/{appointment.Id}")" class="btn btn-warning btn-sm">Редагувати</a>
-                    <button class="btn btn-danger btn-sm" @onclick="() => DeleteAppointment(appointment.Id)">Видалити</button>
-                </td>
-            </tr>
-        }
-        </tbody>
-    </table>
-}
-
-@code {
-    private List<Appointment> _appointments;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await LoadAppointments();
+<style>
+    .welcome-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
     }
 
-    private async Task LoadAppointments()
-    {
-        _appointments = await AppointmentService.GetAppointments();
+    .hero-section {
+        text-align: center;
+        padding: 3rem 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 1rem;
+        margin-bottom: 2rem;
     }
 
-    private async Task DeleteAppointment(int id)
-    {
-        if (await JS.InvokeAsync<bool>("confirm", "Ви впевнені, що хочете видалити цей запис?"))
-        {
-            await AppointmentService.DeleteAppointment(id);
-            await LoadAppointments();
-        }
+    .hero-section h1 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 1rem;
     }
-}
+
+    .lead {
+        font-size: 1.25rem;
+        color: #6c757d;
+    }
+
+    .content-section {
+        display: grid;
+        gap: 2rem;
+    }
+
+    .dashboard-panel, .auth-panel {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        text-align: center;
+    }
+
+    .action-buttons, .auth-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+    }
+
+    .features-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card i {
+        color: #007bff;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+        color: #6c757d;
+        margin: 0;
+    }
+
+    @@media (max-width: 768px) {
+    .action-buttons, .auth-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+    }
+</style>

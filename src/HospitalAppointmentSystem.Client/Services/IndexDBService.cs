@@ -6,7 +6,7 @@ namespace HospitalAppointmentSystem.Client.Services
     public class IndexedDBService
     {
         private readonly IJSRuntime _jsRuntime;
-        private const string DbName = "HospitalDB";
+        private const string DbName = "HospitalAppointmentSystem.db";
         private const int DbVersion = 1;
 
         public IndexedDBService(IJSRuntime jsRuntime)

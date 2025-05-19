@@ -1,35 +1,62 @@
 using System.Security.Claims;
 using System.Text.Json;
 using Microsoft.AspNetCore.Components.Authorization;
-using HospitalAppointmentSystem.Client.Services;
+using Microsoft.JSInterop; // Add this using directive for IJSRuntime
 
-namespace HospitalAppointmentSystem.Client.Auth
+namespace HospitalAppointmentSystem.Client.Services
 {
     public class CustomAuthStateProvider : AuthenticationStateProvider
     {
         private readonly ILocalStorageService _localStorage;
         private readonly HttpClient _httpClient;
+        private readonly IJSRuntime _jsRuntime;
 
-        public CustomAuthStateProvider(ILocalStorageService localStorage, HttpClient httpClient)
+        public CustomAuthStateProvider(
+            ILocalStorageService localStorage, 
+            HttpClient httpClient,
+            IJSRuntime jsRuntime) // Add jsRuntime parameter to constructor
         {
             _localStorage = localStorage;
             _httpClient = httpClient;
+            _jsRuntime = jsRuntime;
         }
 
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
-            var token = await _localStorage.GetItemAsync<string>("authToken");
+            try
+            {
+                await _jsRuntime.InvokeVoidAsync("console.log", "Getting authentication state...");
+            
+                var token = await _localStorage.GetItemAsync<string>("authToken"); // Specify string type explicitly
+                await _jsRuntime.InvokeVoidAsync("console.log", "Token:", token);
 
-            if (string.IsNullOrEmpty(token))
-                return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
+                if (string.IsNullOrEmpty(token))
+                {
+                    await _jsRuntime.InvokeVoidAsync("console.log", "No token found");
+                    return new AuthenticationState(new ClaimsPrincipal(new ClaimsIdentity()));
+                }
 
-            _httpClient.DefaultRequestHeaders.Authorization = 
-                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+                _httpClient.DefaultRequestHeaders.Authorization = 
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
 
-            return new AuthenticationState(
-                new ClaimsPrincipal(
-                    new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt")));
+                var claims = ParseClaimsFromJwt(token);
+                await _jsRuntime.InvokeVoidAsync("console.log", "Claims:", claims);
+
+                var identity = new ClaimsIdentity(claims, "jwt");
+                var user = new ClaimsPrincipal(identity);
+            
+                return new AuthenticationState(user);
+            }
+            catch (Exception ex)
+            {
+                await _jsRuntime.InvokeVoidAsync("console.error", "Auth error:", ex.Message);
+                throw;
+            }
         }
+
+        // Rest of the code remains the same...
+    
+
 
         public void NotifyUserAuthentication(string token)
         {

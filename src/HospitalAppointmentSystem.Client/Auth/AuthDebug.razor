@@ -1,0 +1,44 @@
+@page "/auth-debug"
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthStateProvider
+@inject ILocalStorageService LocalStorage
+@inject IJSRuntime JSRuntime
+
+<h3>Діагностика автентифікації</h3>
+
+<AuthorizeView>
+    <Authorized>
+        <h4>Користувач автентифікований</h4>
+        <p>Ім'я: @context.User.Identity?.Name</p>
+        <h5>Claims:</h5>
+        <ul>
+            @foreach (var claim in context.User.Claims)
+            {
+                <li>@claim.Type: @claim.Value</li>
+            }
+        </ul>
+    </Authorized>
+    <NotAuthorized>
+        <h4>Користувач не автентифікований</h4>
+    </NotAuthorized>
+</AuthorizeView>
+
+<h4>Token в LocalStorage:</h4>
+<pre>@token</pre>
+
+@code {
+    private string? token;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Explicitly specify the type parameter as string
+        token = await LocalStorage.GetItemAsync<string>("authToken");
+
+        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+        await JSRuntime.InvokeVoidAsync("console.log", "Auth state:", new
+        {
+            IsAuthenticated = authState.User.Identity?.IsAuthenticated,
+            Claims = authState.User.Claims.Select(c => new { c.Type, c.Value })
+        });
+    }
+}

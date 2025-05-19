@@ -1,16 +1,41 @@
-﻿<CascadingAuthenticationState>
+﻿@using Microsoft.AspNetCore.Components.Authorization
+
+<CascadingAuthenticationState>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
-            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
-                <NotAuthorized>
-                    <RedirectToLogin />
-                </NotAuthorized>
-                <Authorizing>
-                    <div class="loading-message">
-                        <p>Авторизація...</p>
+            <ErrorBoundary>
+                <ChildContent>
+                    <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+                        <NotAuthorized>
+                            @if (context.User.Identity?.IsAuthenticated != true)
+                            {
+                                <RedirectToLogin />
+                            }
+                            else
+                            {
+                                <p>Вибачте, у вас немає доступу до цієї сторінки.</p>
+                            }
+                        </NotAuthorized>
+                        <Authorizing>
+                            <div class="loading-message">
+                                <p>Авторизація...</p>
+                            </div>
+                        </Authorizing>
+                    </AuthorizeRouteView>
+                    <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+                </ChildContent>
+                <ErrorContent Context="exception">
+                    <div class="alert alert-danger">
+                        <h3>Помилка</h3>
+                        <p>Вибачте, сталася помилка в додатку.</p>
+                        @if (System.Diagnostics.Debugger.IsAttached)
+                        {
+                            <p>@exception.Message</p>
+                            <p>@exception.StackTrace</p>
+                        }
                     </div>
-                </Authorizing>
-            </AuthorizeRouteView>
+                </ErrorContent>
+            </ErrorBoundary>
         </Found>
         <NotFound>
             <PageTitle>Не знайдено</PageTitle>

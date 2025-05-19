@@ -2,7 +2,6 @@ using System.Net.Http.Json;
 using Microsoft.AspNetCore.Components.Authorization;
 using HospitalAppointmentSystem.Client.Interfaces;
 using HospitalAppointmentSystem.Client.Models;
-using HospitalAppointmentSystem.Client.Auth;
 
 namespace HospitalAppointmentSystem.Client.Services
 {
