@@ -1,9 +1,9 @@
-﻿@using Microsoft.AspNetCore.Components.Authorization
+﻿@inject IndexedDbService DbService
 
 <CascadingAuthenticationState>
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
-            <ErrorBoundary>
+            <ErrorBoundary @key="routeData">
                 <ChildContent>
                     <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
                         <NotAuthorized>
@@ -13,11 +13,17 @@
                             }
                             else
                             {
-                                <p>Вибачте, у вас немає доступу до цієї сторінки.</p>
+                                <div class="unauthorized-message">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <h2>Немає доступу</h2>
+                                    <p>Вибачте, у вас немає доступу до цієї сторінки.</p>
+                                    <a href="/" class="btn btn-primary">На головну</a>
+                                </div>
                             }
                         </NotAuthorized>
                         <Authorizing>
-                            <div class="loading-message">
+                            <div class="loading-container">
+                                <div class="loading-spinner"></div>
                                 <p>Авторизація...</p>
                             </div>
                         </Authorizing>
@@ -25,14 +31,18 @@
                     <FocusOnNavigate RouteData="@routeData" Selector="h1" />
                 </ChildContent>
                 <ErrorContent Context="exception">
-                    <div class="alert alert-danger">
+                    <div class="error-container">
+                        <i class="fas fa-exclamation-circle"></i>
                         <h3>Помилка</h3>
                         <p>Вибачте, сталася помилка в додатку.</p>
                         @if (System.Diagnostics.Debugger.IsAttached)
                         {
-                            <p>@exception.Message</p>
-                            <p>@exception.StackTrace</p>
+                            <div class="error-details">
+                                <p class="error-message">@exception.Message</p>
+                                <pre class="error-stack">@exception.StackTrace</pre>
+                            </div>
                         }
+                        <a href="/" class="btn btn-primary">Спробувати знову</a>
                     </div>
                 </ErrorContent>
             </ErrorBoundary>
@@ -40,8 +50,28 @@
         <NotFound>
             <PageTitle>Не знайдено</PageTitle>
             <LayoutView Layout="@typeof(MainLayout)">
-                <p>Вибачте, за цією адресою нічого не знайдено.</p>
+                <div class="not-found-container">
+                    <i class="fas fa-search"></i>
+                    <h2>404 - Сторінку не знайдено</h2>
+                    <p>Вибачте, за цією адресою нічого не знайдено.</p>
+                    <a href="/" class="btn btn-primary">На головну</a>
+                </div>
             </LayoutView>
         </NotFound>
     </Router>
 </CascadingAuthenticationState>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await DbService.InitializeAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error initializing IndexedDB: {ex.Message}");
+        }
+        await base.OnInitializedAsync();
+    }
+}

@@ -1,45 +1,47 @@
 using Microsoft.JSInterop;
 using System.Text.Json;
+using HospitalAppointmentSystem.Client.Models;
 
 namespace HospitalAppointmentSystem.Client.Services
 {
-    public class IndexedDBService
+    public class IndexedDbService
     {
         private readonly IJSRuntime _jsRuntime;
-        private const string DbName = "HospitalAppointmentSystem.db";
-        private const int DbVersion = 1;
+        private readonly string _dbName = "HospitalAppointmentSystem";
 
-        public IndexedDBService(IJSRuntime jsRuntime)
+        public IndexedDbService(IJSRuntime jsRuntime)
         {
             _jsRuntime = jsRuntime;
         }
 
         public async Task InitializeAsync()
         {
-            await _jsRuntime.InvokeVoidAsync("initializeIndexedDB", DbName, DbVersion);
+            await _jsRuntime.InvokeVoidAsync("initDatabase");
         }
 
-        public async Task<T> GetDataAsync<T>(string storeName, int id)
+        public async Task<T> GetByIdAsync<T>(string storeName, int id)
         {
-            var json = await _jsRuntime.InvokeAsync<string>("getFromIndexedDB", DbName, storeName, id);
-            return json == null ? default : JsonSerializer.Deserialize<T>(json);
+            return await _jsRuntime.InvokeAsync<T>("getFromDb", _dbName, storeName, id);
         }
 
-        public async Task<List<T>> GetAllDataAsync<T>(string storeName)
+        public async Task<List<T>> GetAllAsync<T>(string storeName)
         {
-            var jsonArray = await _jsRuntime.InvokeAsync<string[]>("getAllFromIndexedDB", DbName, storeName);
-            return jsonArray?.Select(json => JsonSerializer.Deserialize<T>(json)).ToList() ?? new List<T>();
+            return await _jsRuntime.InvokeAsync<List<T>>("getAllFromDb", _dbName, storeName);
         }
 
-        public async Task SaveDataAsync<T>(string storeName, T data)
+        public async Task<int> AddAsync<T>(string storeName, T item)
         {
-            var json = JsonSerializer.Serialize(data);
-            await _jsRuntime.InvokeVoidAsync("saveToIndexedDB", DbName, storeName, json);
+            return await _jsRuntime.InvokeAsync<int>("addToDb", _dbName, storeName, item);
         }
 
-        public async Task DeleteDataAsync(string storeName, int id)
+        public async Task UpdateAsync<T>(string storeName, T item)
         {
-            await _jsRuntime.InvokeVoidAsync("deleteFromIndexedDB", DbName, storeName, id);
+            await _jsRuntime.InvokeVoidAsync("updateInDb", _dbName, storeName, item);
+        }
+
+        public async Task DeleteAsync(string storeName, int id)
+        {
+            await _jsRuntime.InvokeVoidAsync("deleteFromDb", _dbName, storeName, id);
         }
     }
 }

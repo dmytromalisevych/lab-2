@@ -7,24 +7,25 @@
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
+    <link href="HospitalAppointmentSystem.Client.styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
 <div id="app">
-    <div style="position:absolute; top:30vh; width:100%; text-align:center">
-        <h1>Система запису до лікаря</h1>
-        <div style="display:flex; gap:10px; justify-content:center; align-items:center">
-            <div class="spinner-border" role="status"></div>
-            <div id="loading-status">Завантаження...</div>
-        </div>
+    <div class="loading-app">
+        <div class="spinner"></div>
+        <p>Завантаження...</p>
     </div>
 </div>
 
-<div id="blazor-error-ui" style="display:none;">
+<div id="blazor-error-ui">
     Виникла неопрацьована помилка.
     <a href="" class="reload">Перезавантажити</a>
     <a class="dismiss">🗙</a>
 </div>
 
 <script src="_framework/blazor.webassembly.js"></script>
+<!-- Додайте цей рядок для підключення IndexedDB -->
+<script src="js/indexedDB.js" type="module"></script>
 </body>
 </html>

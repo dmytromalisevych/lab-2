@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>06rcc70b82</Fingerprint>
-      <Integrity>iNzz/FS8wrhrWslnP0I1d/9iVH4ZLLbT1YUXdcOK39E=</Integrity>
+      <Fingerprint>e39nd2fyvt</Fingerprint>
+      <Integrity>No0THH1/zNzyTBrJjrK8KbxVMdj0e0bnTmsA4SkyQc8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</OriginalItemSpec>
@@ -912,8 +912,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cvxeb4ynsi</Fingerprint>
-      <Integrity>+P2ahum9SFdGaKzaiQSOZRIs8YCA+FOVQfNQPTY2Q0M=</Integrity>
+      <Fingerprint>p94iaqpyce</Fingerprint>
+      <Integrity>Hegyr3D7X6YBtO+UBYUEwQA9yDLKQMs6q0RPuDV/xqM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\indexedDB.js'))</OriginalItemSpec>

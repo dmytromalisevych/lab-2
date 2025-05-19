@@ -1,6 +1,6 @@
 namespace HospitalAppointmentSystem.Client.Models;
 
-public class Patient
+public class PatientModel
 {
     public int Id { get; set; }
     public string Email { get; set; } = string.Empty;
